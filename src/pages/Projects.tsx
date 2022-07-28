@@ -1,4 +1,6 @@
-function Projects() {
+import { ReactElement } from "react";
+
+function Projects(): ReactElement {
   return (
     <div>Projects</div>
   );

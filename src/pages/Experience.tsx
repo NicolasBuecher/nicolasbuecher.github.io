@@ -1,4 +1,6 @@
-function Experience() {
+import { ReactElement } from "react";
+
+function Experience(): ReactElement {
   return (
     <div>Experience</div>
   );

@@ -1,15 +1,16 @@
-import './App.css';
+import "./App.css";
+import { ReactElement } from "react";
 import {
   BrowserRouter as Router,
   Routes,
   Route
-} from  "react-router-dom";
-import Home from './pages/Home';
-import Projects from './pages/Projects';
-import Experience from './pages/Experience';
-import Navbar from './components/Navbar';
+} from "react-router-dom";
+import Navbar from "./components/Navbar";
+import Experience from "./pages/Experience";
+import Home from "./pages/Home";
+import Projects from "./pages/Projects";
 
-function App() {
+function App(): ReactElement {
   return (
     <div className="App">
       <Router>
