@@ -31,6 +31,7 @@
 .toggleButton svg {
   font-size: 50px;
 }
+
 .toggleButton button {
   margin-right: 20px;
   background-color: transparent;
@@ -74,9 +75,9 @@
     display: none;
   }
 
-  .hiddenLinks {
+  /* .hiddenLinks {
     display: none;
-  }
+  } */
 
   #open {
     height: 100px;
@@ -84,5 +85,6 @@
 
   #open .links {
     flex-direction: row;
+    margin-top: 0;
   }
 }
