@@ -20,6 +20,12 @@
         "@typescript-eslint",
         "react-hooks"
     ],
+    // Fix the error "Unable to resolve path to module './App'"
+    "settings": {
+        "import/resolver": {
+            "typescript": {}
+        }
+    },
     "rules": {
         // The two next lines should fix the error "'React' was used before it was defined"
         // See https://stackoverflow.com/questions/63818415/react-was-used-before-it-was-defined/64024916#64024916
@@ -29,18 +35,292 @@
         // Fix the error "JSX not allowed in files with extension ''.tsx'"
         "react/jsx-filename-extension": ["warn", { "extensions": [".tsx"] }],
 
+        // Fix the error "Missing file extension 'tsx' for './App'"
+        "import/extensions": [
+            "error",
+            "ignorePackages",
+            {
+                "ts": "never",
+                "tsx": "never"
+            }
+        ],
+
         // Since React 17+, we can ignore this rule
         // https://stackoverflow.com/questions/42640636/react-must-be-in-scope-when-using-jsx-react-react-in-jsx-scope
         "react/react-in-jsx-scope": "off",
 
         // Force all functions have explicit return type
         "@typescript-eslint/explicit-function-return-type": ["error", { "allowExpressions": true }],
-        
-        // Max length of line code
-        "max-len": ["warn", { "code": 80 }],
 
         // React hooks rules
         "react-hooks/rules-of-hooks": "error",
-        "react-hooks/exhaustive-deps": "warn"
+        "react-hooks/exhaustive-deps": "warn",
+
+
+        // All next rules are best practices rules from Hapticmedia
+
+        // Enforces getter/setter pairs in objects
+        "accessor-pairs" : "error",
+
+        // Specify the maximum cyclomatic complexity allowed in a program
+        "complexity" : ["error", 20],
+
+        // Specify curly brace conventions for all control statements
+        "curly" : ["error", "all"],
+
+        // Enforce that class methods use "this"
+        // http://eslint.org/docs/rules/class-methods-use-this
+        "class-methods-use-this" : ["off", {
+            "exceptMethods" : []
+        }],
+
+        // Require the use of === and !==
+        // http://eslint.org/docs/rules/eqeqeq
+        "eqeqeq" : ["error", "allow-null"],
+
+        // Disallow the use of alert, confirm, and prompt
+        "no-alert" : "error",
+
+        // Disallow comparisons to null without a type-checking operator
+        "no-eq-null" : "error",
+
+        // Disallow var and named functions in global scope
+        // http://eslint.org/docs/rules/no-implicit-globals
+        "no-implicit-globals" : "off",
+
+        // Disallow magic numbers
+        // http://eslint.org/docs/rules/no-magic-numbers
+        "no-magic-numbers" : ["error", {
+            "ignore" : [],
+            "ignoreArrayIndexes" : true,
+            "enforceConst" : true,
+            "detectObjects" : false
+        }],
+
+        // Disallow use of multiple spaces
+        "no-multi-spaces" : ["error", {
+            // Allow vertical aligment of End-Of-Line comments
+            "ignoreEOLComments" : true
+        }],
+
+        // Disallow reassignment of function parameters
+        // Allow parameter object manipulation
+        // http://eslint.org/docs/rules/no-param-reassign.html
+        "no-param-reassign" : ["error", {
+            "props" : false
+        }],
+
+        // Disallow certain object properties
+        // http://eslint.org/docs/rules/no-restricted-properties
+        "no-restricted-properties" : ["error", {
+            "object" : "arguments",
+            "property" : "callee",
+            "message" : "arguments.callee is deprecated"
+            }, {
+            "property" : "__defineGetter__",
+            "message" : "Please use Object.defineProperty instead."
+            }, {
+            "property" : "__defineSetter__",
+            "message" : "Please use Object.defineProperty instead."
+            }, {
+            "object" : "Math",
+            "property" : "pow",
+            "message" : "Use the exponentiation operator (**) instead."
+            }, {
+            // TODO: Remove when https://github.com/airbnb/javascript/issues/1492 is fixed
+            "property" : "lenght",
+            "message" : "You made a typo and wrote \"lenght\" instead of \"length\"."
+        }],
+
+        // Disallow use of assignment in return statement
+        "no-return-assign" : "error",
+
+        // Disallow usage of expressions in statement position
+        "no-unused-expressions" : "error",
+
+        // Disallow useless string concatenation
+        // http://eslint.org/docs/rules/no-useless-concat
+        "no-useless-concat" : "error",
+
+        // Disallow usage of configurable warning terms in comments: e.g. todo
+        "no-warning-comments" : ["off", {
+            "location" : "anywhere",
+            "terms" : [
+                "todo",
+                "fixme"
+            ]
+        }],
+
+        // Require function expressions to have a name
+        "func-names" : "error",
+
+        // Overrides airbnb behaviour, see why:
+        // https://github.com/hapticmedia/devops-tools/issues/430
+        "function-paren-newline" : ["error", "consistent"],
+
+        // This option sets a specific tab width for your code
+        // http://eslint.org/docs/rules/indent
+        "indent" : ["error", 2, {
+            "SwitchCase" : 1,
+            "VariableDeclarator" : 1,
+            "outerIIFEBody" : 1,
+            // Enforces indentation level for multi-line property chains.
+            // But unfortunately not in variable declarations and assignments, see why:
+            // https://github.com/eslint/eslint/commit/46b14cd362286cd1d6597a65297685c5b45b447f
+            "MemberExpression" : 1,
+            "FunctionDeclaration" : { "parameters": 1, "body": 1 },
+            "FunctionExpression" : { "parameters": 1, "body": 1 }
+        }],
+
+        // Enforces spacing between keys and values in object literal properties
+        "key-spacing" : ["error", {
+            "singleLine" : {
+                "beforeColon" : false,
+                "afterColon" : true
+            },
+            "multiLine" : {
+                "beforeColon" : true,
+                "afterColon" : true,
+                // Enforce exactly one space before colons in object literals
+                // See https://github.com/hapticmedia/devops-tools/issues/365
+                "mode" : "strict"
+            }
+        }],
+
+        // Allow maximum of 2 blank lines to improve readability
+        // https://eslint.org/docs/rules/no-multiple-empty-lines
+        "no-multiple-empty-lines" : ["error", {
+            "max" : 2,
+            "maxBOF" : 0,
+            "maxEOF" : 0
+        }],
+
+        // Allow use of unary operators, ++ and --
+        // http://eslint.org/docs/rules/no-plusplus
+        "no-plusplus" : "off",
+
+        // Require a newline after each call in a method chain
+        // http://eslint.org/docs/rules/newline-per-chained-call
+        "newline-per-chained-call" : ["error", {
+            // Maximum set to 4 to allow comfortable chaining in Joi schema declarations
+            // Joi.string().valid("A", "B").required().description("desc")
+            "ignoreChainWithDepth" : 4
+        }],
+
+        // Specify the maximum length of a line in your program
+        // http://eslint.org/docs/rules/max-len
+        "max-len" : ["error", 110, 2, {
+            "ignoreUrls" : true,
+            "ignoreComments" : false,
+            "ignoreRegExpLiterals" : true,
+            "ignoreStrings" : true,
+            "ignoreTemplateLiterals" : true
+        }],
+
+        // Specify the maximum depth callbacks can be nested
+        "max-nested-callbacks" : ["error", 4],
+
+        // Limits the number of parameters that can be used in the function declaration.
+        "max-params" : ["error", 10],
+
+        // Enforce padding within blocks
+        "padded-blocks" : ["error", {
+            "classes" : "always",
+            "switches" : "never"
+        }],
+
+        // Specify that double quotes should be used
+        // see http://stackoverflow.com/a/18041188/1480391
+        "quotes" : ["error", "double", { "avoidEscape": true }],
+
+        // Blacklist certain identifiers to prevent them being used
+        // http://eslint.org/docs/rules/id-blacklist
+        "id-blacklist" : ["error",
+            // Prevent "constructor" typos
+            // https://github.com/hapticmedia/sg-cc3d-api/commit/88a3bd127d528a20c0659596f06ce485f95500de
+            // TODO: Remove when https://github.com/airbnb/javascript/issues/1492 is fixed
+            "contructor",
+            "contrutor",
+            "construtor",
+            "construcor",
+            "constuctor",
+            // Prevent "length" typos
+            // TODO: Remove when https://github.com/airbnb/javascript/issues/1492 is fixed
+            "lenght",
+            // Prevent "resource" typos
+            "ressource",
+            "ressources",
+            "Ressource",
+            "Ressources"
+        ],
+
+        // Always jump lines between class members, except for one liners
+        // See https://github.com/hapticmedia/devops-tools/issues/267
+        "lines-between-class-members" : ["error", "always", {
+            "exceptAfterSingleLine" : true
+        }],
+
+        // Overrides airbnb behaviour
+        // https://eslint.org/docs/rules/object-curly-newline
+        "object-curly-newline" : ["error", {
+            "ObjectExpression" : { "multiline": true, "consistent": true },
+            "ObjectPattern" : { "multiline": true, "consistent": true }
+        }],
+
+        // Enforces no braces where they can be omitted
+        // Same behaviour as Prettier, see https://prettier.io/docs/en/options.html#arrow-function-parentheses
+        "arrow-parens" : ["error", "as-needed"],
+
+        // Prefer destructuring from arrays and objects
+        // http://eslint.org/docs/rules/prefer-destructuring
+        "prefer-destructuring" : ["error", {
+            "VariableDeclarator" : {
+                "array" : false,
+                "object" : true
+            },
+            "AssignmentExpression" : {
+                // Overrides Airbnb behaviour
+                "array" : false,
+                // Overrides Airbnb behaviour
+                "object" : false
+            }
+            }, {
+            "enforceForRenamedProperties" : false
+        }],
+
+        // Enforce a convention in module import order
+        // https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md
+        // See https://github.com/airbnb/javascript/blob/06e28997b239a341bcc196905f710f2c437ed8cf/packages/eslint-config-airbnb-base/rules/imports.js#L141-L147
+        "import/order" : ["error", {
+            "newlines-between" : "never",
+            "groups" : [
+                "builtin",
+                "external",
+                "internal",
+                "parent",
+                "sibling",
+                "index"
+            ],
+            "alphabetize" : {
+                "order" : "asc",
+                "caseInsensitive" : false
+            }
+        }],
+
+        // Disallow trailing commas
+        "comma-dangle" : ["error", "never"],
+
+        // Disallow use of console
+        "no-console" : "error",
+
+        // Disallow use of constant expressions in conditions
+        "no-constant-condition" : "error",
+
+        // Disallow function or variable declarations in nested blocks
+        "no-inner-declarations" : ["error", "functions"],
+
+        // Disallow negation of the left operand of an in expression
+        "no-negated-in-lhs" : "error"
+
     }
 }
