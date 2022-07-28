@@ -1,0 +1,46 @@
+{
+    "env": {
+        "browser": true,
+        "es2021": true
+    },
+    "extends": [
+        "plugin:react/recommended",
+        "airbnb"
+    ],
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "ecmaFeatures": {
+            "jsx": true
+        },
+        "ecmaVersion": "latest",
+        "sourceType": "module"
+    },
+    "plugins": [
+        "react",
+        "@typescript-eslint",
+        "react-hooks"
+    ],
+    "rules": {
+        // The two next lines should fix the error "'React' was used before it was defined"
+        // See https://stackoverflow.com/questions/63818415/react-was-used-before-it-was-defined/64024916#64024916
+        // "no-use-before-define": "off",
+        // "@typescript-eslint/no-use-before-define": ["error"],
+
+        // Fix the error "JSX not allowed in files with extension ''.tsx'"
+        "react/jsx-filename-extension": ["warn", { "extensions": [".tsx"] }],
+
+        // Since React 17+, we can ignore this rule
+        // https://stackoverflow.com/questions/42640636/react-must-be-in-scope-when-using-jsx-react-react-in-jsx-scope
+        "react/react-in-jsx-scope": "off",
+
+        // Force all functions have explicit return type
+        "@typescript-eslint/explicit-function-return-type": ["error", { "allowExpressions": true }],
+        
+        // Max length of line code
+        "max-len": ["warn", { "code": 80 }],
+
+        // React hooks rules
+        "react-hooks/rules-of-hooks": "error",
+        "react-hooks/exhaustive-deps": "warn"
+    }
+}
