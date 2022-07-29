@@ -1,3 +1,20 @@
+![CI/CD](https://github.com/NicolasBuecher/nicolasbuecher.github.io/workflows/CI/CD/badge.svg)
+[![codecov](https://codecov.io/gh/NicolasBuecher/nicolasbuecher.github.io/branch/master/graph/badge.svg)](https://codecov.io/gh/NicolasBuecher/nicolasbuecher.github.io)
+
+# Welcome to my user page
+
+This repository hosts the source code of my personal website.
+
+You can reach my website at the url [https://nicolasbuecher.github.io/](https://nicolasbuecher.github.io/).
+
+This project features:
+- Typescript
+- React as frontend framework
+- Jest as unit test framework
+- ESLint as linting tool
+- GitHub Actions for CI/CD
+- GitHub Pages for hosting
+
 # Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
