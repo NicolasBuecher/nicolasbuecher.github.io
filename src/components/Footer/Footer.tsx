@@ -4,7 +4,7 @@ import "./Footer.css";
 
 function Footer(): ReactElement {
   return (
-    <div className="footer">
+    <div className="footer" data-testid="footer">
       <div className="socialMedia">
         <Instagram />
         <Twitter />
