@@ -13,7 +13,7 @@ function Navbar(): ReactElement {
   }, [location]);
 
   return (
-    <div className="navbar" id={expandNavbar ? "open" : "close"}>
+    <div className="navbar" id={expandNavbar ? "open" : "close"} data-testid="navbar">
       <div className="toggleButton">
         <button type="button" onClick={() => { setExpandNavbar(prev => !prev); }}>
           <Reorder />
