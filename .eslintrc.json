@@ -19,7 +19,18 @@
     "plugins": [
         "react",
         "@typescript-eslint",
-        "react-hooks"
+        "react-hooks",
+        "testing-library"
+    ],
+    "overrides": [
+        {
+            "files": ["**/__tests__/**/*.[jt]s?(x)", "**/?(*.)+(spec|test).[jt]s?(x)"],
+            "extends": ["plugin:testing-library/react"],
+            "rules": {
+                // Allows rendering in setup functions
+                "testing-library/no-render-in-setup": "off"
+            }
+        }
     ],
     // Fix the error "Unable to resolve path to module './App'"
     "settings": {
