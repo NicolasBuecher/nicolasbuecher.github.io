@@ -8,7 +8,7 @@ function Home(): ReactElement {
   return (
     <div className="home" data-testid="home">
       <div className="about">
-        <h2>Hy, My name is Nicolas</h2>
+        <h2>Hi, My name is Nicolas</h2>
         <div className="prompt">
           <p>
             A software developer with passion for learning and creating.
