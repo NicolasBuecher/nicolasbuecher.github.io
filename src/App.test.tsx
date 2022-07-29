@@ -13,7 +13,7 @@ describe("App", () => {
   });
 
   it("should render home page", () => {
-    expect(screen.getAllByText("Home").length).toEqual(2);
+    expect(screen.getByTestId("home")).toBeInTheDocument();
   });
 
 });
