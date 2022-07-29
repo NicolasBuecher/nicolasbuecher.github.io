@@ -92,7 +92,14 @@
         // Disallow magic numbers
         // http://eslint.org/docs/rules/no-magic-numbers
         "no-magic-numbers" : ["error", {
-            "ignore" : [],
+            "ignore" : [
+                1,
+                2,
+                3,
+                10,
+                100,
+                1000
+            ],
             "ignoreArrayIndexes" : true,
             "enforceConst" : true,
             "detectObjects" : false
