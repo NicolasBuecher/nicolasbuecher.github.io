@@ -38,17 +38,20 @@ jobs:
     - name: Upload coverage to Codecov
       uses: codecov/codecov-action@v3.1.0
       
-    - name: Build
+    - name: Lint project
+      run: npm run lint
+      
+    - name: Build project
       run: npm run build
       
-    - name: Deploy
+    - name: Deploy project
       run: |
         git config --global user.name $user_name
         git config --global user.email $user_email
         git remote set-url origin https://${github_token}@github.com/${repository}
         npm run deploy
       env:
-        user_name: 'github-actions[bot]'
-        user_email: 'github-actions[bot]@users.noreply.github.com'
+        user_name: 'nicolasb'
+        user_email: 'buecher.nicolas@gmail.com'
         github_token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
         repository: ${{ github.repository }}
