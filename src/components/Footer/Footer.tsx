@@ -1,6 +1,6 @@
 import { Instagram, Twitter, Facebook, LinkedIn } from "@mui/icons-material";
 import { ReactElement } from "react";
-import "../styles/Footer.css";
+import "./Footer.css";
 
 function Footer(): ReactElement {
   return (
