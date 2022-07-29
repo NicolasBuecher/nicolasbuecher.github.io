@@ -28,7 +28,7 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "deploy": "gh-pages -d build -- -m \"chore: Deploy changes to GitHub Pages\"",
+    "deploy": "gh-pages -d build -m \"chore: Deploy changes to GitHub Pages\"",
     "eject": "react-scripts eject"
   },
   "browserslist": {
