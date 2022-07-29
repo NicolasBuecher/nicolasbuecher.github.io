@@ -28,7 +28,6 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "predeploy": "npm run build",
     "deploy": "gh-pages -d build -- -m \"chore: Deploy changes to GitHub Pages\"",
     "eject": "react-scripts eject"
   },
