@@ -1,6 +1,4 @@
-import { ReactElement } from "react";
-
-function Projects(): ReactElement {
+function Projects(): JSX.Element {
   return (
     <div>Projects</div>
   );

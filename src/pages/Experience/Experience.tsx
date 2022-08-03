@@ -1,9 +1,8 @@
-import { ReactElement } from "react";
 import { VerticalTimeline } from "react-vertical-timeline-component";
 import TimelineElement from "../../components/TimelineElement/TimelineElement";
 import "react-vertical-timeline-component/style.min.css";
 
-function Experience(): ReactElement {
+function Experience(): JSX.Element {
   return (
     <div className="experience">
       <VerticalTimeline lineColor="#3e497a">

@@ -1,9 +1,9 @@
 import { Reorder } from "@mui/icons-material";
-import { ReactElement, useEffect, useState } from "react";
+import { useEffect, useState } from "react";
 import { Link, useLocation } from "react-router-dom";
 import "./Navbar.css";
 
-function Navbar(): ReactElement {
+function Navbar(): JSX.Element {
   const [expandNavbar, setExpandNavbar] = useState(false);
 
   const location = useLocation();

@@ -1,12 +1,10 @@
-import { ReactElement } from "react";
-
 interface TimelineElementContentProps {
   title: string;
   subtitle: string;
   text: string;
 }
 
-function TimelineElementContent({ title, subtitle, text }: TimelineElementContentProps): ReactElement {
+function TimelineElementContent({ title, subtitle, text }: TimelineElementContentProps): JSX.Element {
   return (
     <div className="timeline-element-content">
       <h3 className="vertical-timeline-element-title">

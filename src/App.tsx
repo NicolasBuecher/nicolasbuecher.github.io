@@ -1,5 +1,3 @@
-import "./App.css";
-import { ReactElement } from "react";
 import {
   BrowserRouter as Router,
   Routes,
@@ -10,8 +8,9 @@ import Navbar from "./components/Navbar/Navbar";
 import Experience from "./pages/Experience/Experience";
 import Home from "./pages/Home/Home";
 import Projects from "./pages/Projects";
+import "./App.css";
 
-function App(): ReactElement {
+function App(): JSX.Element {
   return (
     <div className="App">
       <Router>

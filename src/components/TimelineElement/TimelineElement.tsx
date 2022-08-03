@@ -1,5 +1,4 @@
 import { School, Work } from "@mui/icons-material";
-import { ReactElement } from "react";
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
 import TimelineElementContent from "./TimelineElementContent";
 
@@ -11,7 +10,7 @@ interface TimelineElementProps {
   text?: string;
 }
 
-function TimelineElement({ type, date, title, subtitle, text = "" }: TimelineElementProps): ReactElement {
+function TimelineElement({ type, date, title, subtitle, text = "" }: TimelineElementProps): JSX.Element {
 
   if (type === "school") {
     return (

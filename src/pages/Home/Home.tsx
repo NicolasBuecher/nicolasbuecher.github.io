@@ -1,10 +1,9 @@
 import EmailIcon from "@mui/icons-material/Email";
 import GithubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import { ReactElement } from "react";
 import "./Home.css";
 
-function Home(): ReactElement {
+function Home(): JSX.Element {
   return (
     <div className="home" data-testid="home">
       <div className="about">
