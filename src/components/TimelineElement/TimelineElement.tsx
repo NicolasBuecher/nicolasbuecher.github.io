@@ -1,6 +1,7 @@
 import { School, Work } from "@mui/icons-material";
 import { ReactElement } from "react";
 import { VerticalTimelineElement } from "react-vertical-timeline-component";
+import TimelineElementContent from "./TimelineElementContent";
 
 interface TimelineElementProps {
   type: "school" | "work";
@@ -10,7 +11,8 @@ interface TimelineElementProps {
   text?: string;
 }
 
-function TimelineElement({ type, date, title, subtitle, text }: TimelineElementProps): ReactElement {
+function TimelineElement({ type, date, title, subtitle, text = "" }: TimelineElementProps): ReactElement {
+
   if (type === "school") {
     return (
       <VerticalTimelineElement
@@ -19,13 +21,7 @@ function TimelineElement({ type, date, title, subtitle, text }: TimelineElementP
         iconStyle={{ background: "#3e497a", color: "#fff" }}
         icon={<School />}
       >
-        <h3 className="vertical-timeline-element-title">
-          {title}
-        </h3>
-        <h4 className="vertical-timeline-element-subtitle">
-          {subtitle}
-        </h4>
-        {text ? <p>{text}</p> : ""}
+        <TimelineElementContent title={title} subtitle={subtitle} text={text} />
       </VerticalTimelineElement>
     );
   }
@@ -37,19 +33,9 @@ function TimelineElement({ type, date, title, subtitle, text }: TimelineElementP
       iconStyle={{ background: "#e9d35b", color: "#fff" }}
       icon={<Work />}
     >
-      <h3 className="vertical-timeline-element-title">
-        {title}
-      </h3>
-      <h4 className="vertical-timeline-element-subtitle">
-        {subtitle}
-      </h4>
-      {text ? <p>{text}</p> : ""}
+      <TimelineElementContent title={title} subtitle={subtitle} text={text} />
     </VerticalTimelineElement>
   );
 }
-
-TimelineElement.defaultProps = {
-  text : ""
-};
 
 export default TimelineElement;
