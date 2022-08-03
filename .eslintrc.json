@@ -68,6 +68,11 @@
         "react-hooks/rules-of-hooks": "error",
         "react-hooks/exhaustive-deps": "warn",
 
+        // Switch the rule to defaultArguments because defaultProps will be deprecated
+        // See https://github.com/facebook/react/pull/16210
+        "react/require-default-props": ["error", {
+            "functions": "defaultArguments"
+        }],
 
         // All next rules are best practices rules from Hapticmedia
 
