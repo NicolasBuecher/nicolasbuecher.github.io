@@ -1,4 +1,7 @@
 {
+  // Add a ruler where line exceeds the max 110 characters
+  "editor.rulers": [ 110 ],
+
   // Next bloc controls eslint autoformat on save
   "editor.defaultFormatter": "dbaeumer.vscode-eslint",
   "editor.formatOnSave": true,
