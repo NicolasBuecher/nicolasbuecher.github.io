@@ -12,7 +12,7 @@ import "./App.css";
 
 function App(): JSX.Element {
   return (
-    <div className="App">
+    <div className="App" data-testid="app">
       <Router>
         <Navbar />
         <Routes>

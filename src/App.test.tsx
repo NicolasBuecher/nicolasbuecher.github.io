@@ -1,19 +1,14 @@
 import { render, screen } from "@testing-library/react";
 import App from "./App";
 
+jest.mock("react-router-dom");
+
 describe("App", () => {
 
-  beforeEach(() => {
+  // This test exists only for coverage
+  it("should render a single page application", () => {
     render(<App />);
-  });
-
-  it("should render a navbar and a footer", () => {
-    expect(screen.getByTestId("navbar")).toBeInTheDocument();
-    expect(screen.getByTestId("footer")).toBeInTheDocument();
-  });
-
-  it("should render home page", () => {
-    expect(screen.getByTestId("home")).toBeInTheDocument();
+    expect(screen.getByTestId("app")).toBeInTheDocument();
   });
 
 });

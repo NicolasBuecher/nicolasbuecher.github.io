@@ -3,6 +3,8 @@ import user from "@testing-library/user-event";
 import { BrowserRouter } from "react-router-dom";
 import Navbar from "./Navbar";
 
+jest.mock("@mui/icons-material");
+
 describe("Navbar", () => {
 
   beforeEach(() => {
@@ -13,11 +15,6 @@ describe("Navbar", () => {
         <Navbar />
       </BrowserRouter>
     );
-  });
-
-  it("should render a button and 3 links", () => {
-    expect(screen.getByRole("button")).toBeInTheDocument();
-    expect(screen.getAllByRole("link").length).toEqual(3);
   });
 
   it("should not be expanded at first", () => {
