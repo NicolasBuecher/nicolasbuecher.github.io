@@ -1,18 +1,18 @@
 {
   "files": {
     "main.css": "/static/css/main.dc2ef7f0.css",
-    "main.js": "/static/js/main.d5782e77.js",
+    "main.js": "/static/js/main.5fe20dab.js",
     "static/js/787.a364051d.chunk.js": "/static/js/787.a364051d.chunk.js",
     "static/media/projectHapticmediaGuerlainPerfume.png": "/static/media/projectHapticmediaGuerlainPerfume.0352e0ffd18644e67811.png",
     "static/media/projectHapticmediaGuerlainLipstick.png": "/static/media/projectHapticmediaGuerlainLipstick.3ce861a2e062746e214a.png",
     "static/media/projectApviz.png": "/static/media/projectApviz.972ad2beade922ab81fe.png",
     "index.html": "/index.html",
     "main.dc2ef7f0.css.map": "/static/css/main.dc2ef7f0.css.map",
-    "main.d5782e77.js.map": "/static/js/main.d5782e77.js.map",
+    "main.5fe20dab.js.map": "/static/js/main.5fe20dab.js.map",
     "787.a364051d.chunk.js.map": "/static/js/787.a364051d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.dc2ef7f0.css",
-    "static/js/main.d5782e77.js"
+    "static/js/main.5fe20dab.js"
   ]
 }
