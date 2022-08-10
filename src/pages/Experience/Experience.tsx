@@ -4,7 +4,7 @@ import "react-vertical-timeline-component/style.min.css";
 
 function Experience(): JSX.Element {
   return (
-    <div className="experience">
+    <div className="experience" data-testid="experience">
       <VerticalTimeline lineColor="#3e497a">
         <TimelineElement
           type="school"

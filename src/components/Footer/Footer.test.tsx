@@ -6,7 +6,7 @@ jest.mock("@mui/icons-material");
 describe("Footer", () => {
 
   // This test exists only for coverage
-  it("should render an experience page", () => {
+  it("should render a footer", () => {
     render(<Footer />);
     expect(screen.getByTestId("footer")).toBeInTheDocument();
   });
