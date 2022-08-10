@@ -1,15 +1,18 @@
 {
   "files": {
-    "main.css": "/static/css/main.4b615206.css",
-    "main.js": "/static/js/main.fb1e5f49.js",
+    "main.css": "/static/css/main.dc2ef7f0.css",
+    "main.js": "/static/js/main.4d3a2921.js",
     "static/js/787.a364051d.chunk.js": "/static/js/787.a364051d.chunk.js",
+    "static/media/projectHapticmediaGuerlainPerfume.png": "/static/media/projectHapticmediaGuerlainPerfume.0352e0ffd18644e67811.png",
+    "static/media/projectHapticmediaGuerlainLipstick.png": "/static/media/projectHapticmediaGuerlainLipstick.3ce861a2e062746e214a.png",
+    "static/media/projectApviz.png": "/static/media/projectApviz.972ad2beade922ab81fe.png",
     "index.html": "/index.html",
-    "main.4b615206.css.map": "/static/css/main.4b615206.css.map",
-    "main.fb1e5f49.js.map": "/static/js/main.fb1e5f49.js.map",
+    "main.dc2ef7f0.css.map": "/static/css/main.dc2ef7f0.css.map",
+    "main.4d3a2921.js.map": "/static/js/main.4d3a2921.js.map",
     "787.a364051d.chunk.js.map": "/static/js/787.a364051d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.4b615206.css",
-    "static/js/main.fb1e5f49.js"
+    "static/css/main.dc2ef7f0.css",
+    "static/js/main.4d3a2921.js"
   ]
 }
