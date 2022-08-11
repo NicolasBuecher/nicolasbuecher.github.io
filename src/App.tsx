@@ -7,8 +7,10 @@ import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
 import Experience from "./pages/Experience/Experience";
 import Home from "./pages/Home/Home";
+import ProjectDisplay from "./pages/ProjectDisplay/ProjectDisplay";
 import Projects from "./pages/Projects/Projects";
 import "./App.css";
+
 
 function App(): JSX.Element {
   return (
@@ -18,6 +20,7 @@ function App(): JSX.Element {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/projects" element={<Projects />} />
+          <Route path="/projects/:id" element={<ProjectDisplay />} />
           <Route path="/experience" element={<Experience />} />
         </Routes>
         <Footer />

@@ -7,7 +7,7 @@ function Projects(): JSX.Element {
     <div className="projects" data-testid="projects">
       <h1>Projects with Hapticmedia</h1>
       <div className="projectList">
-        {ProjectList.map(({ key, name, image }) => <ProjectItem key={key} name={name} image={image} />)}
+        {ProjectList.map(({ id, name, image }) => <ProjectItem key={id} id={id} name={name} image={image} />)}
       </div>
     </div>
   );

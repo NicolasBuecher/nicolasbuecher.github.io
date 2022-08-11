@@ -3,26 +3,30 @@ import ProjectGuerlainLipstickImg from "../../assets/projectHapticmediaGuerlainL
 import ProjectGuerlainPerfume from "../../assets/projectHapticmediaGuerlainPerfume.png";
 
 type Project = {
-  key: number;
+  id: number;
   name: string;
   image: string;
+  skill: string;
 }
 
 const ProjectList: Project[] = [
   {
-    key : 0,
+    id : 0,
     name : "SaaS 3D Configurator Apviz",
-    image : ProjectApvizImg
+    image : ProjectApvizImg,
+    skill : "Typescript, Javascript, BabylonJS, NodeJS, React, HTML5, CSS3"
   },
   {
-    key : 1,
+    id : 1,
     name : "Perfume 3D Configurator for Guerlain",
-    image : ProjectGuerlainPerfume
+    image : ProjectGuerlainPerfume,
+    skill : "Typescript, Javascript, BabylonJS, NodeJS, React, HTML5, CSS3"
   },
   {
-    key : 2,
+    id : 2,
     name : "Lipstick 3D Configurator for Guerlain",
-    image : ProjectGuerlainLipstickImg
+    image : ProjectGuerlainLipstickImg,
+    skill : "Typescript, Javascript, BabylonJS, NodeJS, React, HTML5, CSS3"
   }
 ];
 
