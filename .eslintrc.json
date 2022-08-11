@@ -74,6 +74,9 @@
             "functions": "defaultArguments"
         }],
 
+        // Enforce the use of template literals over string concatenation
+        "prefer-template": ["error"],
+
         // All next rules are best practices rules from Hapticmedia
 
         // Enforces getter/setter pairs in objects
