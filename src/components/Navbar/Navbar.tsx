@@ -1,31 +1,108 @@
-import { Reorder } from "@mui/icons-material";
-import { useEffect, useState } from "react";
-import { Link, useLocation } from "react-router-dom";
-import "./Navbar.css";
+import {
+  GitHub,
+  LinkedIn,
+  Menu as MenuIcon,
+  Skateboarding
+} from "@mui/icons-material";
+import {
+  AppBar,
+  Box,
+  Button,
+  IconButton,
+  Menu,
+  MenuItem,
+  Toolbar,
+  Typography,
+  useMediaQuery
+} from "@mui/material";
+import { useState } from "react";
+import { Link } from "react-router-dom";
 
 function Navbar(): JSX.Element {
-  const [expandNavbar, setExpandNavbar] = useState(false);
 
-  const location = useLocation();
+  // Used to set the position of the menu
+  const [anchorElement, setAnchorElement] = useState<null | HTMLElement>(null);
 
-  useEffect(() => {
-    setExpandNavbar(false);
-  }, [location]);
+  // Handle menu opening
+  const isMenuOpen = !!anchorElement;
+  const openMenu = (event: React.MouseEvent<HTMLButtonElement>): void => {
+    setAnchorElement(event.currentTarget);
+  };
+  const closeMenu = (): void => {
+    setAnchorElement(null);
+  };
 
+  // Replace navbar by a menu icon if screen is too small
+  const isScreenSmall = useMediaQuery("(max-width:700px)");
+  if (isScreenSmall) {
+    return (
+      <AppBar position="static" className="navbar" data-testid="navbar">
+        <Toolbar sx={{ display: "flex" }}>
+          <Box sx={{ display: "flex", flex: "0 0 50%" }} data-testid="logo">
+            <Button color="inherit" startIcon={<Skateboarding />}>
+              <Typography variant="h6">Nicolas BUECHER</Typography>
+            </Button>
+          </Box>
+          <Box sx={{ display: "flex", flex: "0 0 50%", justifyContent: "flex-end" }}>
+            <IconButton
+              color="inherit"
+              id="main-menu-button"
+              data-testid="main-menu-button"
+              aria-controls={isMenuOpen ? "basic-menu" : undefined}
+              aria-haspopup="true"
+              aria-expanded={isMenuOpen ? "true" : undefined}
+              onClick={openMenu}
+            >
+              <MenuIcon />
+            </IconButton>
+            <Menu
+              id="main-menu"
+              data-testid="main-menu"
+              anchorEl={anchorElement}
+              open={isMenuOpen}
+              onClose={closeMenu}
+              MenuListProps={{
+                "aria-labelledby" : "main-menu-button"
+              }}
+            >
+              <MenuItem onClick={closeMenu} component={Link} to="/">Home</MenuItem>
+              <MenuItem onClick={closeMenu} component={Link} to="/">About Me</MenuItem>
+              <MenuItem onClick={closeMenu} component={Link} to="/projects">Projects</MenuItem>
+              <MenuItem onClick={closeMenu} component={Link} to="/">Contact</MenuItem>
+            </Menu>
+          </Box>
+        </Toolbar>
+      </AppBar>
+    );
+  }
+
+  // Display a navbar when screen is wider
   return (
-    <div className="navbar" id={expandNavbar ? "open" : "close"} data-testid="navbar">
-      <div className="toggleButton">
-        <button type="button" onClick={() => { setExpandNavbar(prev => !prev); }}>
-          <Reorder />
-        </button>
-      </div>
-      <div className="links">
-        <Link to="/"> Home </Link>
-        <Link to="/projects"> Projects </Link>
-        <Link to="/experience"> Experience </Link>
-      </div>
-    </div>
+    <AppBar position="static" className="navbar" data-testid="navbar">
+      <Toolbar sx={{ display: "flex" }}>
+        <Box sx={{ display: "flex", flex: "0 0 35%" }} data-testid="logo">
+          <Button color="inherit" startIcon={<Skateboarding />}>
+            <Typography variant="h6">Nicolas BUECHER</Typography>
+          </Button>
+        </Box>
+        <Box sx={{ display: "flex", flex: "0 0 55%", justifyContent: "flex-end" }} data-testid="navigation-links">
+          <Button color="inherit" sx={{ mx: "1%" }} component={Link} to="/">HOME</Button>
+          <Button color="inherit" sx={{ mx: "1%" }} component={Link} to="/">ABOUT ME</Button>
+          <Button color="inherit" sx={{ mx: "1%" }} component={Link} to="/projects">PROJECTS</Button>
+          <Button color="inherit" sx={{ mx: "1%" }} component={Link} to="/">CONTACT</Button>
+        </Box>
+        <Box sx={{ display: "flex", flex: "0 0 10%", justifyContent: "flex-end" }} data-testid="media-icons">
+          <IconButton color="inherit">
+            <LinkedIn />
+          </IconButton>
+          <IconButton color="inherit">
+            <GitHub />
+          </IconButton>
+        </Box>
+      </Toolbar>
+    </AppBar>
   );
+
 }
 
 export default Navbar;
