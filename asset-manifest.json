@@ -1,18 +1,30 @@
 {
   "files": {
-    "main.css": "/static/css/main.bfc7f82a.css",
-    "main.js": "/static/js/main.5aa24a51.js",
+    "main.css": "/static/css/main.eb406a97.css",
+    "main.js": "/static/js/main.cffe86a5.js",
     "static/js/787.a364051d.chunk.js": "/static/js/787.a364051d.chunk.js",
     "static/media/projectHapticmediaGuerlainPerfume.png": "/static/media/projectHapticmediaGuerlainPerfume.0352e0ffd18644e67811.png",
     "static/media/projectHapticmediaGuerlainLipstick.png": "/static/media/projectHapticmediaGuerlainLipstick.3ce861a2e062746e214a.png",
+    "static/media/poppins-all-400-normal.woff": "/static/media/poppins-all-400-normal.6fbfdac99c274b77fe96.woff",
+    "static/media/poppins-all-300-normal.woff": "/static/media/poppins-all-300-normal.9541f56e25efdc1d8e2d.woff",
     "static/media/projectApviz.png": "/static/media/projectApviz.972ad2beade922ab81fe.png",
+    "static/media/poppins-all-500-normal.woff": "/static/media/poppins-all-500-normal.4716bc1dd9f51751d3ef.woff",
+    "static/media/poppins-devanagari-400-normal.woff2": "/static/media/poppins-devanagari-400-normal.64d5f06ee726edd58ca3.woff2",
+    "static/media/poppins-devanagari-300-normal.woff2": "/static/media/poppins-devanagari-300-normal.8236e953c7367362a568.woff2",
+    "static/media/poppins-devanagari-500-normal.woff2": "/static/media/poppins-devanagari-500-normal.f43b6ebf46ee6fba0555.woff2",
+    "static/media/poppins-latin-400-normal.woff2": "/static/media/poppins-latin-400-normal.405055dd680fa1dcdfa2.woff2",
+    "static/media/poppins-latin-300-normal.woff2": "/static/media/poppins-latin-300-normal.39576fe9df8a22cc1bcc.woff2",
+    "static/media/poppins-latin-500-normal.woff2": "/static/media/poppins-latin-500-normal.08491d3f7fe7ae88ef44.woff2",
+    "static/media/poppins-latin-ext-400-normal.woff2": "/static/media/poppins-latin-ext-400-normal.4f38b4331448d2313adc.woff2",
+    "static/media/poppins-latin-ext-500-normal.woff2": "/static/media/poppins-latin-ext-500-normal.b59bcdf2f050e663ca29.woff2",
+    "static/media/poppins-latin-ext-300-normal.woff2": "/static/media/poppins-latin-ext-300-normal.b0bb003afc8483bd32d2.woff2",
     "index.html": "/index.html",
-    "main.bfc7f82a.css.map": "/static/css/main.bfc7f82a.css.map",
-    "main.5aa24a51.js.map": "/static/js/main.5aa24a51.js.map",
+    "main.eb406a97.css.map": "/static/css/main.eb406a97.css.map",
+    "main.cffe86a5.js.map": "/static/js/main.cffe86a5.js.map",
     "787.a364051d.chunk.js.map": "/static/js/787.a364051d.chunk.js.map"
   },
   "entrypoints": [
-    "static/css/main.bfc7f82a.css",
-    "static/js/main.5aa24a51.js"
+    "static/css/main.eb406a97.css",
+    "static/js/main.cffe86a5.js"
   ]
 }
