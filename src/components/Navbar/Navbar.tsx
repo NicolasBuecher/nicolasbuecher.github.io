@@ -38,12 +38,12 @@ function Navbar(): JSX.Element {
     return (
       <AppBar position="static" className="navbar" data-testid="navbar">
         <Toolbar sx={{ display: "flex" }}>
-          <Box sx={{ display: "flex", flex: "0 0 50%" }} data-testid="logo">
+          <Box sx={{ display: "flex", flex: "0 0 80%" }} data-testid="logo">
             <Button color="inherit" startIcon={<Skateboarding />}>
-              <Typography variant="h6">Nicolas BUECHER</Typography>
+              <Typography>Nicolas BUECHER</Typography>
             </Button>
           </Box>
-          <Box sx={{ display: "flex", flex: "0 0 50%", justifyContent: "flex-end" }}>
+          <Box sx={{ display: "flex", flex: "0 0 20%", justifyContent: "flex-end" }}>
             <IconButton
               color="inherit"
               id="main-menu-button"
