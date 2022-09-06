@@ -1,6 +1,7 @@
-import { Box, Button, Typography } from "@mui/material";
+import { Box, Typography } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import AboutMeImg from "../../assets/aboutMeTravel.png";
+import DownloadButton from "../../components/DownloadButton/DownloadButton";
 
 
 // Responsive MUI Grid2 text title style
@@ -147,10 +148,16 @@ function AboutMe(): JSX.Element {
         </Box>
       </Grid>
       <Grid xs={12} sm={6} md={6} lg={6} xl={12}>
-        <Box display="flex" justifyContent="center">
-          <Button variant="contained" size="large">
-            DOWNLOAD CV
-          </Button>
+        <Box display="flex" flexWrap="wrap" justifyContent="center" gap="3vw 5vw">
+          <DownloadButton
+            href="cv-2022-08-no-number-no-address.pdf"
+            download="BUECHER_CV_2022"
+          >
+            DOWNLOAD CV (FR)
+          </DownloadButton>
+          <DownloadButton>
+            DOWNLOAD CV (EN)
+          </DownloadButton>
         </Box>
       </Grid>
     </Grid>
