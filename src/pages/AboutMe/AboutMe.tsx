@@ -17,7 +17,7 @@ const sectionContentStyle = {
 /**
  * Returns a React component displaying the "/about" page.
  *
- * @returns JSX.Element
+ * @returns {JSX.Element}
  */
 function AboutMe(): JSX.Element {
 

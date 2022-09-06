@@ -18,6 +18,12 @@ import {
 import { useState } from "react";
 import { Link } from "react-router-dom";
 
+
+/**
+ * Returns a React component displaying a responsive static navigation bar.
+ *
+ * @returns {JSX.Element}
+ */
 function Navbar(): JSX.Element {
 
   // Used to set the position of the menu
