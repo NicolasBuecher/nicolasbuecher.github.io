@@ -36,11 +36,11 @@ function Navbar(): JSX.Element {
   const isScreenSmall = useMediaQuery("(max-width:700px)");
   if (isScreenSmall) {
     return (
-      <AppBar position="static" className="navbar" data-testid="navbar">
+      <AppBar position="static">
         <Toolbar sx={{ display: "flex" }}>
           <Box sx={{ display: "flex", flex: "0 0 80%" }} data-testid="logo">
             <Button color="inherit" startIcon={<Skateboarding />}>
-              <Typography>Nicolas BUECHER</Typography>
+              <Typography variant="h6">Nicolas BUECHER</Typography>
             </Button>
           </Box>
           <Box sx={{ display: "flex", flex: "0 0 20%", justifyContent: "flex-end" }}>
@@ -66,7 +66,7 @@ function Navbar(): JSX.Element {
               }}
             >
               <MenuItem onClick={closeMenu} component={Link} to="/">Home</MenuItem>
-              <MenuItem onClick={closeMenu} component={Link} to="/">About Me</MenuItem>
+              <MenuItem onClick={closeMenu} component={Link} to="/about">About Me</MenuItem>
               <MenuItem onClick={closeMenu} component={Link} to="/projects">Projects</MenuItem>
               <MenuItem onClick={closeMenu} component={Link} to="/">Contact</MenuItem>
             </Menu>
@@ -78,7 +78,7 @@ function Navbar(): JSX.Element {
 
   // Display a navbar when screen is wider
   return (
-    <AppBar position="static" className="navbar" data-testid="navbar">
+    <AppBar position="static">
       <Toolbar sx={{ display: "flex" }}>
         <Box sx={{ display: "flex", flex: "0 0 35%" }} data-testid="logo">
           <Button color="inherit" startIcon={<Skateboarding />}>
@@ -87,7 +87,7 @@ function Navbar(): JSX.Element {
         </Box>
         <Box sx={{ display: "flex", flex: "0 0 55%", justifyContent: "flex-end" }} data-testid="navigation-links">
           <Button color="inherit" sx={{ mx: "1%" }} component={Link} to="/">HOME</Button>
-          <Button color="inherit" sx={{ mx: "1%" }} component={Link} to="/">ABOUT ME</Button>
+          <Button color="inherit" sx={{ mx: "1%" }} component={Link} to="/about">ABOUT ME</Button>
           <Button color="inherit" sx={{ mx: "1%" }} component={Link} to="/projects">PROJECTS</Button>
           <Button color="inherit" sx={{ mx: "1%" }} component={Link} to="/">CONTACT</Button>
         </Box>
