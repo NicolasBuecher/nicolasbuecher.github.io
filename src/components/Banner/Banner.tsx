@@ -52,7 +52,7 @@ const typoTmpStyle = {
  */
 function Banner(): JSX.Element {
   return (
-    <Box sx={backgroundStyle}>
+    <Box sx={backgroundStyle} data-testid="banner">
       <Box sx={bannerStyle}>
         <Typography variant="h3" sx={typoHelloStyle}>
           Hey, I&apos;m Nicolas.
