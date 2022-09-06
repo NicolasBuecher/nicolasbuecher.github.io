@@ -1,19 +1,10 @@
-import { Box, Typography } from "@mui/material";
+import { Box } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
 import AboutMeImg from "../../assets/aboutMeTravel.png";
+import AboutSectionContent from "../../components/AboutSectionContent/AboutSectionContent";
+import AboutSectionTitle from "../../components/AboutSectionTitle/AboutSectionTitle";
 import DownloadButton from "../../components/DownloadButton/DownloadButton";
 
-
-// Responsive MUI Grid2 text title style
-const sectionTitleStyle = {
-  fontWeight : "600",
-  mb : "3vw"
-};
-
-// Responsive MUI Grid2 text content style
-const sectionContentStyle = {
-  my : "2vw"
-};
 
 /**
  * Returns a React component displaying the "/about" page.
@@ -29,30 +20,30 @@ function AboutMe(): JSX.Element {
       </Grid>
       <Grid xs={12} sm={7} md={6} lg={8} xl={5}>
         <Box>
-          <Typography sx={sectionTitleStyle} variant="h5">ABOUT ME</Typography>
-          <Typography sx={sectionContentStyle} align="justify">
+          <AboutSectionTitle>ABOUT ME</AboutSectionTitle>
+          <AboutSectionContent justify>
             <b>I&apos;m an IT Engineer</b>
             {" "}
             who started his career in 2016 as R&D Engineer in 3D graphics for a
             DeepTech/RetailTech french startup.
-          </Typography>
-          <Typography sx={sectionContentStyle} align="justify">
+          </AboutSectionContent>
+          <AboutSectionContent justify>
             In a very innovative but competitive domain, we soon started the development of a SaaS 3D
             configurator and I took up the position of Web Software Engineer.
-          </Typography>
-          <Typography sx={sectionContentStyle} align="justify">
+          </AboutSectionContent>
+          <AboutSectionContent justify>
             I had the luck to work in a very controlled environment (DevOps, best practices, tests, systematic
             reviews...) which makes me confident in realizing quality projects.
-          </Typography>
-          <Typography sx={sectionContentStyle} align="justify">
+          </AboutSectionContent>
+          <AboutSectionContent justify>
             <b>But I&apos;m also:</b>
             <br />
             An autodidact pianist, a longboard rider, a craft beer lover, a tireless
             backpacker, a baby theater actor, a volleyball player, a volunteer in many cultural events, a
             concert halls regular, an occasional hiker, a living local cultural agenda, concerned by ecology
             and feminism...
-          </Typography>
-          <Typography sx={sectionContentStyle}>
+          </AboutSectionContent>
+          <AboutSectionContent justify>
             I speak
             {" "}
             <b>French</b>
@@ -67,13 +58,13 @@ function AboutMe(): JSX.Element {
             {" "}
             <b>German</b>
             .
-          </Typography>
+          </AboutSectionContent>
         </Box>
       </Grid>
       <Grid xs={12} sm={6} md={6} lg={6} xl={4}>
         <Box>
-          <Typography sx={sectionTitleStyle} variant="h5">SKILLS</Typography>
-          <Typography sx={sectionContentStyle}>
+          <AboutSectionTitle>SKILLS</AboutSectionTitle>
+          <AboutSectionContent>
             <b>WEB - </b>
             Typescript
             {" "}
@@ -84,16 +75,16 @@ function AboutMe(): JSX.Element {
             <b>&#183;</b>
             {" "}
             NodeJS
-          </Typography>
-          <Typography sx={sectionContentStyle}>
+          </AboutSectionContent>
+          <AboutSectionContent>
             <b>FRONTEND - </b>
             React
             {" "}
             <b>&#183;</b>
             {" "}
             Material UI
-          </Typography>
-          <Typography sx={sectionContentStyle}>
+          </AboutSectionContent>
+          <AboutSectionContent>
             <b>CLOUD - </b>
             AWS Lambda
             {" "}
@@ -108,16 +99,16 @@ function AboutMe(): JSX.Element {
             <b>&#183;</b>
             {" "}
             AWS X-Ray
-          </Typography>
-          <Typography sx={sectionContentStyle}>
+          </AboutSectionContent>
+          <AboutSectionContent>
             <b>TEST - </b>
             Jest
-          </Typography>
-          <Typography sx={sectionContentStyle}>
+          </AboutSectionContent>
+          <AboutSectionContent>
             <b>ALGORITHMS - </b>
             Go
-          </Typography>
-          <Typography sx={sectionContentStyle}>
+          </AboutSectionContent>
+          <AboutSectionContent>
             <b>DEVOPS - </b>
             CI/CD GitHub Actions
             {" "}
@@ -132,8 +123,8 @@ function AboutMe(): JSX.Element {
             <b>&#183;</b>
             {" "}
             Best practices
-          </Typography>
-          <Typography sx={sectionContentStyle}>
+          </AboutSectionContent>
+          <AboutSectionContent>
             <b>3D - </b>
             WebGL
             {" "}
@@ -144,7 +135,7 @@ function AboutMe(): JSX.Element {
             <b>&#183;</b>
             {" "}
             BabylonJS
-          </Typography>
+          </AboutSectionContent>
         </Box>
       </Grid>
       <Grid xs={12} sm={6} md={6} lg={6} xl={12}>
