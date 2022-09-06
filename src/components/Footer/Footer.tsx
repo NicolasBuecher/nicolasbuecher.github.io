@@ -1,17 +1,16 @@
-import { Instagram, Twitter, Facebook, LinkedIn } from "@mui/icons-material";
-import "./Footer.css";
+import { Box, Typography } from "@mui/material";
 
+
+/**
+ * Returns a React component displaying a responsive footer.
+ *
+ * @returns {JSX.Element}
+ */
 function Footer(): JSX.Element {
   return (
-    <div className="footer" data-testid="footer">
-      <div className="socialMedia">
-        <Instagram />
-        <Twitter />
-        <Facebook />
-        <LinkedIn />
-      </div>
-      <p> &copy; 2022 nicolasbuecher.github.io</p>
-    </div>
+    <Box display="flex" justifyContent="center" mt="5vw" mb="2vw" data-testid="footer">
+      <Typography variant="overline"> &copy; 2022 nicolasbuecher.github.io</Typography>
+    </Box>
   );
 }
 
