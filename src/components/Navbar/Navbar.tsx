@@ -45,7 +45,7 @@ function Navbar(): JSX.Element {
       <AppBar position="static">
         <Toolbar sx={{ display: "flex" }}>
           <Box sx={{ display: "flex", flex: "0 0 80%" }} data-testid="logo">
-            <Button color="inherit" startIcon={<Skateboarding />}>
+            <Button color="inherit" startIcon={<Skateboarding />} component={Link} to="/">
               <Typography variant="h6">Nicolas BUECHER</Typography>
             </Button>
           </Box>
@@ -87,7 +87,7 @@ function Navbar(): JSX.Element {
     <AppBar position="static">
       <Toolbar sx={{ display: "flex" }}>
         <Box sx={{ display: "flex", flex: "0 0 35%" }} data-testid="logo">
-          <Button color="inherit" startIcon={<Skateboarding />}>
+          <Button color="inherit" startIcon={<Skateboarding />} component={Link} to="/">
             <Typography variant="h6">Nicolas BUECHER</Typography>
           </Button>
         </Box>

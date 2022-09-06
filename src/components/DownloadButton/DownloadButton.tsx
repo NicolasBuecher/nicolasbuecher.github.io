@@ -9,6 +9,7 @@ interface DownloadButtonProps {
 
 /**
  * Returns a React component displaying a download button and handling the download event.
+ * If href prop is empty or undefined, the button is disabled.
  *
  * @param {string} props.href Path to the file to download
  * @param {string} props.download Name of the downloaded file
