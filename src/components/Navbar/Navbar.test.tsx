@@ -4,6 +4,7 @@ import user from "@testing-library/user-event";
 import { BrowserRouter } from "react-router-dom";
 import Navbar from "./Navbar";
 
+
 // Mock useMediaQuery function
 jest.mock("@mui/material", () => ({
   ...jest.requireActual("@mui/material"),
@@ -73,6 +74,51 @@ describe("Navbar", () => {
 
     it("should display media icons", () => {
       expect(screen.getByTestId("media-icons")).toBeInTheDocument();
+    });
+
+    describe("when the logo button is clicked", () => {
+
+      it("should route to the home page", () => {
+        user.click(screen.getByRole("link", { name: "Nicolas BUECHER" }));
+        expect(global.window.location.href).toBe("http://localhost/");
+      });
+
+    });
+
+    describe("when the home button is clicked", () => {
+
+      it("should route to the home page", () => {
+        user.click(screen.getByRole("link", { name: "HOME" }));
+        expect(global.window.location.href).toBe("http://localhost/");
+      });
+
+    });
+
+    describe("when the about button is clicked", () => {
+
+      it("should route to the home page", () => {
+        user.click(screen.getByRole("link", { name: "ABOUT ME" }));
+        expect(global.window.location.href).toContain("/about");
+      });
+
+    });
+
+    describe("when the projects button is clicked", () => {
+
+      it("should route to the home page", () => {
+        user.click(screen.getByRole("link", { name: "PROJECTS" }));
+        expect(global.window.location.href).toContain("/projects");
+      });
+
+    });
+
+    describe("when the contact button is clicked", () => {
+
+      it("should route to the home page", () => {
+        user.click(screen.getByRole("link", { name: "CONTACT" }));
+        expect(global.window.location.href).toBe("http://localhost/");
+      });
+
     });
 
   });

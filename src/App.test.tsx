@@ -1,7 +1,10 @@
 import { render, screen } from "@testing-library/react";
 import App from "./App";
 
-jest.mock("react-router-dom");
+
+jest.mock("./components/Navbar/Navbar");
+jest.mock("./components/Footer/Footer");
+jest.mock("./pages/Home/Home");
 
 describe("App", () => {
 

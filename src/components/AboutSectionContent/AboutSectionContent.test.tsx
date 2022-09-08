@@ -1,6 +1,7 @@
 import { render, screen } from "@testing-library/react";
 import AboutSectionContent from "./AboutSectionContent";
 
+
 describe("AboutSectionContent", () => {
 
   it("should pass the children prop", () => {
