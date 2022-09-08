@@ -77,6 +77,13 @@
         // Enforce the use of template literals over string concatenation
         "prefer-template": ["error"],
 
+        // Fix the fact it was impossible to chain arrow functions when mocking components in test files
+        "react/function-component-definition": ["error", {
+            "namedComponents": "function-declaration",
+            "unnamedComponents": "arrow-function"
+        }] ,
+
+
         // All next rules are best practices rules from Hapticmedia
 
         // Enforces getter/setter pairs in objects
