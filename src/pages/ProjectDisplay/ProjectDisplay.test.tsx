@@ -2,6 +2,7 @@ import { render, screen } from "@testing-library/react";
 import Router from "react-router-dom";
 import ProjectDisplay from "./ProjectDisplay";
 
+
 // Mock useParams function
 jest.mock("react-router-dom", () => ({
   ...jest.requireActual("react-router-dom"),
@@ -11,7 +12,7 @@ jest.mock("react-router-dom", () => ({
 // Mock ProjectList array
 jest.mock("../../pages/Projects/ProjectList.tsx", () => ([{
   id : 0,
-  name : "someName",
+  title : "someName",
   image : "someImage",
   skill : "someSkill"
 }]));

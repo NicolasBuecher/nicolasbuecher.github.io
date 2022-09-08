@@ -1,6 +1,7 @@
 import { Box } from "@mui/material";
 import Banner from "../../components/Banner/Banner";
 import AboutMe from "../AboutMe/AboutMe";
+import Projects from "../Projects/Projects";
 
 
 /**
@@ -14,6 +15,7 @@ function Home(): JSX.Element {
     <Box data-testid="home">
       <Banner />
       <AboutMe />
+      <Projects />
     </Box>
   );
 

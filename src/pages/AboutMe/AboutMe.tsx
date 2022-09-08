@@ -14,7 +14,7 @@ import DownloadButton from "../../components/DownloadButton/DownloadButton";
 function AboutMe(): JSX.Element {
 
   return (
-    <Grid container spacing="3vw" m="1vw 4vw" data-testid="about-me">
+    <Grid container spacing="3vw" m="0 4vw" pt="1vw" data-testid="about-me">
       <Grid xs={0} sm={5} md={6} lg={4} xl={3} display="flex">
         <Box sx={{ width: "100%", my: "auto" }} component="img" alt="One picture of my numerous travels." src={AboutMeImg} />
       </Grid>

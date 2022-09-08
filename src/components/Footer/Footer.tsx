@@ -8,7 +8,7 @@ import { Box, Typography } from "@mui/material";
  */
 function Footer(): JSX.Element {
   return (
-    <Box display="flex" justifyContent="center" mt="5vw" mb="2vw" data-testid="footer">
+    <Box display="flex" justifyContent="center" my="1vw" data-testid="footer">
       <Typography variant="overline"> &copy; 2022 nicolasbuecher.github.io</Typography>
     </Box>
   );

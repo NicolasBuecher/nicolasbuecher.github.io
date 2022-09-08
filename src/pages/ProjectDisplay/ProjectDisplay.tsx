@@ -2,7 +2,7 @@ import { GitHub } from "@mui/icons-material";
 import { useParams } from "react-router-dom";
 import parseIntStrict from "../../helpers/parseIntStrict";
 import ProjectList from "../Projects/ProjectList";
-import "./ProjectDisplay.css";
+
 
 function ProjectDisplay(): JSX.Element {
   const { id } = useParams();
@@ -23,8 +23,8 @@ function ProjectDisplay(): JSX.Element {
 
   return (
     <div className="projectDisplay">
-      <h1>{project.name}</h1>
-      <img src={project.image} alt={project.name} />
+      <h1>{project.title}</h1>
+      <img src={project.img} alt={project.title} />
       <p>
         <b>Skills:</b>
         {" "}
