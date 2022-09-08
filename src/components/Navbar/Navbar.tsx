@@ -1,6 +1,4 @@
 import {
-  GitHub,
-  LinkedIn,
   Menu as MenuIcon,
   Skateboarding
 } from "@mui/icons-material";
@@ -17,6 +15,8 @@ import {
 } from "@mui/material";
 import { useState } from "react";
 import { Link } from "react-router-dom";
+import GitHubIconButton from "../GitHubIconButton/GitHubIconButton";
+import LinkedInIconButton from "../LinkedInIconButton/LinkedInIconButton";
 
 
 /**
@@ -98,12 +98,8 @@ function Navbar(): JSX.Element {
           <Button color="inherit" sx={{ mx: "1%" }} component={Link} to="/">CONTACT</Button>
         </Box>
         <Box sx={{ display: "flex", flex: "0 0 10%", justifyContent: "flex-end" }} data-testid="media-icons">
-          <IconButton color="inherit">
-            <LinkedIn />
-          </IconButton>
-          <IconButton color="inherit">
-            <GitHub />
-          </IconButton>
+          <LinkedInIconButton />
+          <GitHubIconButton />
         </Box>
       </Toolbar>
     </AppBar>
