@@ -40,7 +40,7 @@ const theme = createTheme({
 function App(): JSX.Element {
   return (
     <ThemeProvider theme={theme}>
-      <div className="App" data-testid="app">
+      <div className="app" data-testid="app">
         <Router>
           <Navbar />
           <Routes>

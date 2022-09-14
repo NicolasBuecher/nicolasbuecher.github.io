@@ -16,7 +16,12 @@ function AboutMe(): JSX.Element {
   return (
     <Grid container spacing="3vw" m="0 4vw" pt="1vw" data-testid="about-me">
       <Grid xs={0} sm={5} md={6} lg={4} xl={3} display="flex">
-        <Box sx={{ width: "100%", my: "auto" }} component="img" alt="One picture of my numerous travels." src={AboutMeImg} />
+        <Box
+          component="img"
+          alt="One picture of my numerous travels."
+          src={AboutMeImg}
+          sx={{ width: "100%", my: "auto" }}
+        />
       </Grid>
       <Grid xs={12} sm={7} md={6} lg={8} xl={5}>
         <Box>

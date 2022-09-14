@@ -44,12 +44,12 @@ function Navbar(): JSX.Element {
     return (
       <AppBar position="static">
         <Toolbar sx={{ display: "flex" }}>
-          <Box sx={{ display: "flex", flex: "0 0 80%" }} data-testid="logo">
+          <Box sx={{ flex: "0 0 80%", display: "flex" }} data-testid="logo">
             <Button color="inherit" startIcon={<Skateboarding />} component={Link} to="/">
               <Typography variant="h6">Nicolas BUECHER</Typography>
             </Button>
           </Box>
-          <Box sx={{ display: "flex", flex: "0 0 20%", justifyContent: "flex-end" }}>
+          <Box sx={{ flex: "0 0 20%", display: "flex", justifyContent: "flex-end" }}>
             <IconButton
               color="inherit"
               id="main-menu-button"
@@ -86,18 +86,18 @@ function Navbar(): JSX.Element {
   return (
     <AppBar position="static">
       <Toolbar sx={{ display: "flex" }}>
-        <Box sx={{ display: "flex", flex: "0 0 35%" }} data-testid="logo">
+        <Box sx={{ flex: "0 0 35%", display: "flex" }} data-testid="logo">
           <Button color="inherit" startIcon={<Skateboarding />} component={Link} to="/">
             <Typography variant="h6">Nicolas BUECHER</Typography>
           </Button>
         </Box>
-        <Box sx={{ display: "flex", flex: "0 0 55%", justifyContent: "flex-end" }} data-testid="navigation-links">
+        <Box sx={{ flex: "0 0 55%", display: "flex", justifyContent: "flex-end" }} data-testid="navlinks">
           <Button color="inherit" sx={{ mx: "1%" }} component={Link} to="/">HOME</Button>
           <Button color="inherit" sx={{ mx: "1%" }} component={Link} to="/about">ABOUT ME</Button>
           <Button color="inherit" sx={{ mx: "1%" }} component={Link} to="/projects">PROJECTS</Button>
           <Button color="inherit" sx={{ mx: "1%" }} component={Link} to="/">CONTACT</Button>
         </Box>
-        <Box sx={{ display: "flex", flex: "0 0 10%", justifyContent: "flex-end" }} data-testid="media-icons">
+        <Box sx={{ flex: "0 0 10%", display: "flex", justifyContent: "flex-end" }} data-testid="media-icons">
           <LinkedInIconButton />
           <GitHubIconButton />
         </Box>

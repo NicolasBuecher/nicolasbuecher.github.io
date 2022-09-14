@@ -17,7 +17,7 @@ interface AboutSectionContentProps {
 function AboutSectionContent({ justify = false, children }: AboutSectionContentProps): JSX.Element {
 
   return (
-    <Typography my="2vw" align={justify ? "justify" : undefined}>
+    <Typography align={justify ? "justify" : undefined} my="2vw">
       {children}
     </Typography>
   );

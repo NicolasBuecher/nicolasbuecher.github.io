@@ -22,7 +22,6 @@ function ProjectButton({ startIcon, link = "", children }: ProjectButtonProps): 
   return (
     <Button
       startIcon={startIcon}
-      sx={{ width: "70%", mx: "auto", my: ".5vw" }}
       variant="contained"
       size="medium"
       disabled={!link}
@@ -30,6 +29,7 @@ function ProjectButton({ startIcon, link = "", children }: ProjectButtonProps): 
       href={link}
       target="_blank"
       rel="noopener noreferrer"
+      sx={{ width: "70%", mx: "auto", my: ".5vw" }}
     >
       {children}
     </Button>

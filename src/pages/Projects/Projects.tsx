@@ -12,11 +12,11 @@ import ProjectList from "../../data/ProjectList";
 function Projects(): JSX.Element {
 
   return (
-    <Grid container m="0" sx={{ backgroundColor: "rgba(0,0,0,0.04)" }}>
+    <Grid container m="0" bgcolor="rgba(0,0,0,0.04)">
       <Grid xs={12} sm={12} md={12} lg={12} xl={12} display="flex" justifyContent="center" mt="3vw" mb="2vw">
         <Typography variant="h4" fontSize="2rem" fontWeight="500">MY PROJECTS</Typography>
       </Grid>
-      <Grid container spacing="3vw" m="0 4vw" display="flex" justifyContent="center">
+      <Grid container spacing="3vw" display="flex" justifyContent="center" mx="4vw">
         {ProjectList.slice(0).reverse().map(({ id, img, alt, title, subtitle }) => (
           <Grid xs={6} sm={4} md={3} lg={3} xl={2.2} key={id}>
             <ProjectCard

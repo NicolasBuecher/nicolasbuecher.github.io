@@ -8,13 +8,13 @@ interface AboutSectionTitleProps {
 /**
  * Returns a React component displaying a responsive about text title.
  *
- * @param {children} props.children About text content
+ * @param {string} props.children About text content
  * @returns {JSX.Element}
  */
 function AboutSectionTitle({ children }: AboutSectionTitleProps): JSX.Element {
 
   return (
-    <Typography fontWeight="600" mb="3vw" variant="h5">
+    <Typography variant="h5" mb="3vw" fontWeight="600">
       {children}
     </Typography>
   );

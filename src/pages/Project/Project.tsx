@@ -9,7 +9,6 @@ import Carousel from "../../components/Carousel/Carousel";
 import ProjectButton from "../../components/ProjectButton/ProjectButton";
 import ProjectList from "../../data/ProjectList";
 import parseIntStrict from "../../helpers/parseIntStrict";
-import "./Project.css";
 
 
 /**
@@ -37,19 +36,19 @@ function Project(): JSX.Element {
   }
 
   return (
-    <Box className="project">
+    <Box bgcolor="rgba(0,0,0,0.04)">
       <Grid container columnSpacing="4vw" rowSpacing="2vw" m="0 4vw">
-        <Grid xs={12} sm={12} md={12} lg={12} xl={12} className="project-header">
+        <Grid xs={12} sm={12} md={12} lg={12} xl={12} display="flex" mt="1vw">
           <Box component="img" src={project.img} alt={project.alt} height="75px" />
           <Box display="flex" flexDirection="column" justifyContent="center">
             <Typography variant="h5">{project.title}</Typography>
             <Typography variant="body2" color="text.secondary">{project.subtitle}</Typography>
           </Box>
         </Grid>
-        <Grid xs={12} sm={6} md={6} lg={7} xl={7} className="project-carousel">
+        <Grid xs={12} sm={6} md={6} lg={7} xl={7} mb="2vw">
           <Carousel content={project.media} />
         </Grid>
-        <Grid xs={12} sm={6} md={6} lg={5} xl={5} gap="1vw" className="project-details">
+        <Grid xs={12} sm={6} md={6} lg={5} xl={5} display="flex" flexDirection="column" gap="1vw">
           <Typography variant="subtitle2" align="right" gutterBottom>
             Launched in
             {" "}
@@ -62,7 +61,7 @@ function Project(): JSX.Element {
               {line}
             </Typography>
           ))}
-          <Box className="project-details-buttons">
+          <Box display="flex" flexDirection="column" alignItems="center" my="2vw">
             <ProjectButton startIcon={<Visibility />} link={project.link}>
               See the project
             </ProjectButton>
@@ -75,7 +74,11 @@ function Project(): JSX.Element {
             {project.owned
               ? undefined
               : (
-                <Typography variant="overline" align="center" className="project-disclaimer">
+                <Typography
+                  variant="overline"
+                  align="center"
+                  sx={{ width: "70%", my: ".5vw", fontSize: "0.6rem", lineHeight: "1.5" }}
+                >
                   (Please note this project could be taken offline at any moment as I don&apos;t own it)
                 </Typography>
               )}

@@ -28,7 +28,7 @@ describe("Navbar", () => {
     });
 
     it("should hide navigation links", () => {
-      expect(screen.queryByTestId("navigation-links")).not.toBeInTheDocument();
+      expect(screen.queryByTestId("navlinks")).not.toBeInTheDocument();
     });
 
     it("should hide media icons", () => {
@@ -69,7 +69,7 @@ describe("Navbar", () => {
     });
 
     it("should display navigation links", () => {
-      expect(screen.getByTestId("navigation-links")).toBeInTheDocument();
+      expect(screen.getByTestId("navlinks")).toBeInTheDocument();
     });
 
     it("should display media icons", () => {

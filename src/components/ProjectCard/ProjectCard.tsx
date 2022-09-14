@@ -29,12 +29,8 @@ function ProjectCard({ id, img, alt, title, subtitle }: ProjectCardProps): JSX.E
   return (
     <Card sx={{ boxShadow: "none", backgroundColor: "transparent" }}>
       <CardActionArea component={Link} to={`/projects/${id}`}>
-        <CardMedia
-          component="img"
-          alt={alt}
-          image={img}
-        />
-        <CardContent sx={{ display: "flex", flexDirection: "column", justifyContent: "center", alignItems: "center" }}>
+        <CardMedia component="img" alt={alt} image={img} />
+        <CardContent>
           <Typography gutterBottom variant="h5" align="center">
             {title}
           </Typography>
