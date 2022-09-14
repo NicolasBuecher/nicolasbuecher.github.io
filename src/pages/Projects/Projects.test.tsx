@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import Projects from "./Projects";
 
 
-jest.mock("./ProjectList", () => ([{
+jest.mock("../../data/ProjectList", () => ([{
   id : 0,
   img : "Test",
   alt : "Test",

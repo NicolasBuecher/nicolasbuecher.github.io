@@ -2,7 +2,7 @@ import { render, screen } from "@testing-library/react";
 import Banner from "./Banner";
 
 
-jest.mock("../../assets/homeBanner.png", () => "");
+jest.mock("../../assets/images/homeBanner.png", () => "");
 
 describe("Banner", () => {
 

@@ -10,7 +10,7 @@ jest.mock("react-router-dom", () => ({
 }));
 
 // Mock ProjectList array
-jest.mock("../../pages/Projects/ProjectList.tsx", () => ([{
+jest.mock("../../data/ProjectList.tsx", () => ([{
   id : 0,
   img : "imgTest",
   alt : "altTest",
@@ -93,32 +93,12 @@ describe("Project", () => {
     expect(screen.getByText("descriptionTest")).toBeInTheDocument();
   });
 
-  describe("when project link is not provided", () => {
-
-    it("should disable the link button", () => {
-      jest.spyOn(Router, "useParams").mockReturnValue({ id: "0" });
-      renderProject();
-      expect(screen.getByRole("button", { name: "Link to the project" })).toHaveClass("Mui-disabled");
-    });
-
-  });
-
   describe("when project is not owned", () => {
 
     it("should display a disclaimer", () => {
       jest.spyOn(Router, "useParams").mockReturnValue({ id: "0" });
       renderProject();
       expect(screen.getByText("(Please note this project could be taken offline at any moment as I don't own it)")).toBeInTheDocument();
-    });
-
-  });
-
-  describe("when project github link is provided", () => {
-
-    it("should display a github icon button", () => {
-      jest.spyOn(Router, "useParams").mockReturnValue({ id: "0" });
-      renderProject();
-      expect(screen.getByRole("link", { name: "GitHubIconButton" })).toBeInTheDocument();
     });
 
   });

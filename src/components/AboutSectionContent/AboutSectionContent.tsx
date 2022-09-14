@@ -11,7 +11,7 @@ interface AboutSectionContentProps {
  * Returns a React component displaying a responsive about text content.
  *
  * @param {boolean} props.justify True if text must be justified
- * @param {children} props.children About text content
+ * @param {ReactNode} props.children About text content
  * @returns {JSX.Element}
  */
 function AboutSectionContent({ justify = false, children }: AboutSectionContentProps): JSX.Element {
