@@ -119,6 +119,7 @@
         // http://eslint.org/docs/rules/no-magic-numbers
         "no-magic-numbers" : ["error", {
             "ignore" : [
+                0,
                 1,
                 2,
                 3,

@@ -1,7 +1,7 @@
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Unstable_Grid2";
 import ProjectCard from "../../components/ProjectCard/ProjectCard";
-import ProjectList from "./ProjectList";
+import ProjectList from "../../data/ProjectList";
 
 
 /**

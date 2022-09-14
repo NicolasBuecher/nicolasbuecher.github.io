@@ -1,0 +1,61 @@
+.carousel {
+  width: 100%;
+}
+
+.carousel .image-gallery-slide-wrapper {
+  background-color: white;
+}
+
+.carousel .image-gallery-icon:hover {
+  color: rgba(0,140,140,0.5);
+}
+
+.carousel .image-gallery-icon:focus {
+  outline: 2px solid rgba(0,140,140,0.5);
+}
+
+.carousel .image-gallery-left-nav,
+.carousel .image-gallery-right-nav {
+  padding: 15vh 10px;
+}
+
+.carousel .image-gallery-left-nav .image-gallery-svg,
+.carousel .image-gallery-right-nav .image-gallery-svg {
+  max-height: 14vh;
+  max-width: 7vh;
+}
+
+.carousel .image-gallery-image,
+.carousel video {
+  width: 100%;
+  aspect-ratio: 16/9;
+  max-height: 50vh !important;
+  object-fit: contain;
+}
+
+.carousel .image-gallery-thumbnails .image-gallery-thumbnails-container {
+  cursor: default;
+}
+
+.carousel .image-gallery-thumbnail {
+  aspect-ratio: 1/1;
+  border: 2px solid transparent;
+  transition:
+    border 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms,
+    background-color 250ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+}
+
+.carousel .image-gallery-thumbnail.active,
+.carousel .image-gallery-thumbnail:focus,
+.carousel .image-gallery-thumbnail:hover {
+  outline: none;
+  border: none;
+  border-radius: 10%;
+  cursor: pointer;
+  background-color: rgba(0,140,140,0.2);
+}
+
+.carousel:fullscreen .image-gallery-image,
+.carousel:fullscreen video {
+  max-height: 100vh !important;
+}

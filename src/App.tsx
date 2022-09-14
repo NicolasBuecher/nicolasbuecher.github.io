@@ -12,7 +12,7 @@ import Navbar from "./components/Navbar/Navbar";
 import AboutMe from "./pages/AboutMe/AboutMe";
 import Experience from "./pages/Experience/Experience";
 import Home from "./pages/Home/Home";
-import ProjectDisplay from "./pages/ProjectDisplay/ProjectDisplay";
+import Project from "./pages/Project/Project";
 import Projects from "./pages/Projects/Projects";
 import "./App.css";
 
@@ -47,7 +47,7 @@ function App(): JSX.Element {
             <Route path="/" element={<Home />} />
             <Route path="/about" element={<AboutMe />} />
             <Route path="/projects" element={<Projects />} />
-            <Route path="/projects/:id" element={<ProjectDisplay />} />
+            <Route path="/projects/:id" element={<Project />} />
             <Route path="/experience" element={<Experience />} />
           </Routes>
           <Footer />
