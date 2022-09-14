@@ -1,32 +1,49 @@
-import ProjectApvizImg from "../assets/projectApviz512.png";
-import ProjectApvizJewelryVid from "../assets/projectApvizJewelry.mp4";
-import ProjectApvizWatchVid from "../assets/projectApvizWatch.mp4";
-import ProjectHapticmediaBaccaratVid from "../assets/projectHapticmediaBaccarat.mp4";
-import ProjectHapticmediaBaccaratImg from "../assets/projectHapticmediaBaccarat512.png";
-import ProjectHapticmediaBaccaratVidPreview from "../assets/projectHapticmediaBaccaratVidPreview.png";
-import ProjectHapticmediaBaumeVid from "../assets/projectHapticmediaBaume.mp4";
-import ProjectHapticmediaBaumeImg from "../assets/projectHapticmediaBaume512.png";
-import ProjectHapticmediaCourbetVid from "../assets/projectHapticmediaCourbet.mp4";
-import ProjectHapticmediaCourbetImg from "../assets/projectHapticmediaCourbet512.png";
-import ProjectHapticmediaCuisinellaVid from "../assets/projectHapticmediaCuisinella.mp4";
-import ProjectHapticmediaCuisinellaImg from "../assets/projectHapticmediaCuisinella512.png";
-import ProjectHapticmediaEdenlyVid from "../assets/projectHapticmediaEdenly.mp4";
-import ProjectHapticmediaEdenlyImg from "../assets/projectHapticmediaEdenly512.png";
-import ProjectHapticmediaGuerlainLipstickVid from "../assets/projectHapticmediaGuerlainLipstick.mp4";
-import ProjectHapticmediaGuerlainLipstickImg from "../assets/projectHapticmediaGuerlainLipstick512.png";
-import ProjectHapticmediaGuerlainPerfumeVid from "../assets/projectHapticmediaGuerlainPerfume.mp4";
-import ProjectHapticmediaGuerlainPerfumeImg from "../assets/projectHapticmediaGuerlainPerfume512.png";
-import ProjectHapticmediaKenzoVid from "../assets/projectHapticmediaKenzo.mp4";
-import ProjectHapticmediaKenzoImg from "../assets/projectHapticmediaKenzo512.png";
-import ProjectHapticmediaPiagetVid from "../assets/projectHapticmediaPiaget.mp4";
-import ProjectHapticmediaPiagetImg from "../assets/projectHapticmediaPiaget512.png";
-import ProjectHapticmediaSchmidtDressingVid from "../assets/projectHapticmediaSchmidtDressing.mp4";
-import ProjectHapticmediaSchmidtDressingImg from "../assets/projectHapticmediaSchmidtDressing512.png";
-import ProjectHapticmediaSchmidtKitchenVid from "../assets/projectHapticmediaSchmidtKitchen.mp4";
-import ProjectHapticmediaSchmidtKitchenImg from "../assets/projectHapticmediaSchmidtKitchen512.png";
-import ProjectHapticmediaVanCleefArpelsVid from "../assets/projectHapticmediaVanCleefArpels.mp4";
-import ProjectHapticmediaVanCleefArpelsImg from "../assets/projectHapticmediaVanCleefArpels512.png";
-import ProjectPersonalWebsiteImg from "../assets/projectPersonalWebsite512.png";
+import ProjectApvizImg from "../assets/images/projectApviz512.png";
+import ProjectApvizJewelryPreviewImg from "../assets/images/projectApvizJewelryPreview.png";
+import ProjectApvizWatchPreviewImg from "../assets/images/projectApvizWatchPreview.png";
+import ProjectHapticmediaBaccaratImg from "../assets/images/projectHapticmediaBaccarat512.png";
+import ProjectHapticmediaBaccaratPreviewImg from "../assets/images/projectHapticmediaBaccaratPreview.png";
+import ProjectHapticmediaBaumeImg from "../assets/images/projectHapticmediaBaume512.png";
+import ProjectHapticmediaBaumePreviewImg from "../assets/images/projectHapticmediaBaumePreview.png";
+import ProjectHapticmediaCourbetImg from "../assets/images/projectHapticmediaCourbet512.png";
+import ProjectHapticmediaCourbetPreviewImg from "../assets/images/projectHapticmediaCourbetPreview.png";
+import ProjectHapticmediaCuisinellaImg from "../assets/images/projectHapticmediaCuisinella512.png";
+import ProjectHapticmediaCuisinellaPreviewImg from "../assets/images/projectHapticmediaCuisinellaPreview.png";
+import ProjectHapticmediaEdenlyImg from "../assets/images/projectHapticmediaEdenly512.png";
+import ProjectHapticmediaEdenlyPreviewImg from "../assets/images/projectHapticmediaEdenlyPreview.png";
+import ProjectHapticmediaGuerlainLipstickImg from "../assets/images/projectHapticmediaGuerlainLipstick512.png";
+import ProjectHapticmediaGuerlainLipstickPreviewImg from "../assets/images/projectHapticmediaGuerlainLipstickPreview.png";
+import ProjectHapticmediaGuerlainPerfumeImg from "../assets/images/projectHapticmediaGuerlainPerfume512.png";
+import ProjectHapticmediaGuerlainPerfumePreviewImg from "../assets/images/projectHapticmediaGuerlainPerfumePreview.png";
+import ProjectHapticmediaKenzoImg from "../assets/images/projectHapticmediaKenzo512.png";
+import ProjectHapticmediaKenzoPreviewImg from "../assets/images/projectHapticmediaKenzoPreview.png";
+import ProjectHapticmediaPiagetImg from "../assets/images/projectHapticmediaPiaget512.png";
+import ProjectHapticmediaPiagetPreviewImg from "../assets/images/projectHapticmediaPiagetPreview.png";
+import ProjectHapticmediaSchmidtDressingImg from "../assets/images/projectHapticmediaSchmidtDressing512.png";
+import ProjectHapticmediaSchmidtDressingPreviewImg from "../assets/images/projectHapticmediaSchmidtDressingPreview.png";
+import ProjectHapticmediaSchmidtKitchenImg from "../assets/images/projectHapticmediaSchmidtKitchen512.png";
+import ProjectHapticmediaSchmidtKitchenPreviewImg from "../assets/images/projectHapticmediaSchmidtKitchenPreview.png";
+import ProjectHapticmediaVanCleefArpelsImg from "../assets/images/projectHapticmediaVanCleefArpels512.png";
+import ProjectHapticmediaVanCleefArpelsPreviewImg from "../assets/images/projectHapticmediaVanCleefArpelsPreview.png";
+import ProjectPersonalWebsiteImg from "../assets/images/projectPersonalWebsite512.png";
+import ProjectPersonalWebsiteAboutImg from "../assets/images/projectPersonalWebsiteAbout.png";
+import ProjectPersonalWebsiteHomeImg from "../assets/images/projectPersonalWebsiteHome.png";
+import ProjectPersonalWebsiteProjectImg from "../assets/images/projectPersonalWebsiteProject.png";
+import ProjectPersonalWebsiteResponsiveImg from "../assets/images/projectPersonalWebsiteResponsive.png";
+import ProjectApvizJewelryVid from "../assets/videos/projectApvizJewelry.mp4";
+import ProjectApvizWatchVid from "../assets/videos/projectApvizWatch.mp4";
+import ProjectHapticmediaBaccaratVid from "../assets/videos/projectHapticmediaBaccarat.mp4";
+import ProjectHapticmediaBaumeVid from "../assets/videos/projectHapticmediaBaume.mp4";
+import ProjectHapticmediaCourbetVid from "../assets/videos/projectHapticmediaCourbet.mp4";
+import ProjectHapticmediaCuisinellaVid from "../assets/videos/projectHapticmediaCuisinella.mp4";
+import ProjectHapticmediaEdenlyVid from "../assets/videos/projectHapticmediaEdenly.mp4";
+import ProjectHapticmediaGuerlainLipstickVid from "../assets/videos/projectHapticmediaGuerlainLipstick.mp4";
+import ProjectHapticmediaGuerlainPerfumeVid from "../assets/videos/projectHapticmediaGuerlainPerfume.mp4";
+import ProjectHapticmediaKenzoVid from "../assets/videos/projectHapticmediaKenzo.mp4";
+import ProjectHapticmediaPiagetVid from "../assets/videos/projectHapticmediaPiaget.mp4";
+import ProjectHapticmediaSchmidtDressingVid from "../assets/videos/projectHapticmediaSchmidtDressing.mp4";
+import ProjectHapticmediaSchmidtKitchenVid from "../assets/videos/projectHapticmediaSchmidtKitchen.mp4";
+import ProjectHapticmediaVanCleefArpelsVid from "../assets/videos/projectHapticmediaVanCleefArpels.mp4";
 import type { Project } from "../types/Project";
 
 
@@ -37,13 +54,18 @@ const ProjectList: Project[] = [
     alt : "Kitchen 3D configurator project at Hapticmedia cie",
     title : "Schmidt",
     subtitle : "Kitchen 3D configurator",
-    description : [""],
+    description : [
+      "This project was carried out within the company Hapticmedia.",
+      "Based on our own 3D engine, we delivered a real-time customized 3D configurator alongside with a webapp.",
+      "My job on this project was to develop the 3D engine with Typescript and BabylonJS."
+    ],
     date : "2017",
-    link : "",
+    link : "https://www.home-design.schmidt/en-gb/3d-kitchen-configurator",
+    details : "https://hapticmedia.com/3d-configurator-kitchen/",
     owned : false,
     media : [{
-      img : "",
-      alt : "",
+      img : ProjectHapticmediaSchmidtKitchenPreviewImg,
+      alt : "Kitchen 3D configurator presentation clip",
       clip : ProjectHapticmediaSchmidtKitchenVid
     }]
   },
@@ -53,13 +75,18 @@ const ProjectList: Project[] = [
     alt : "Dressing 3D configurator project at Hapticmedia cie",
     title : "Schmidt",
     subtitle : "Dressing 3D configurator",
-    description : [""],
+    description : [
+      "This project was carried out within the company Hapticmedia.",
+      "Based on our own 3D engine, we delivered a real-time customized 3D configurator alongside with a webapp.",
+      "My job on this project was to develop the 3D engine with Typescript and BabylonJS."
+    ],
     date : "2017",
-    link : "",
+    link : "https://www.home-design.schmidt/fr-fr/configurateur-3d-dressing",
+    details : "https://hapticmedia.com/3d-configurator-dressing/",
     owned : false,
     media : [{
-      img : "",
-      alt : "",
+      img : ProjectHapticmediaSchmidtDressingPreviewImg,
+      alt : "Dressing 3D configurator presentation clip",
       clip : ProjectHapticmediaSchmidtDressingVid
     }]
   },
@@ -69,13 +96,18 @@ const ProjectList: Project[] = [
     alt : "Kitchen 3D configurator project at Hapticmedia cie",
     title : "Cuisinella",
     subtitle : "Kitchen 3D configurator",
-    description : [""],
+    description : [
+      "This project was carried out within the company Hapticmedia.",
+      "Based on our own 3D engine, we delivered a real-time customized 3D configurator alongside with a webapp.",
+      "My job on this project was to develop the 3D engine with Typescript and BabylonJS."
+    ],
     date : "2017",
-    link : "",
+    link : "https://www.ma.cuisinella/fr-fr/configurateur-cuisine-3d-envies",
+    details : "https://hapticmedia.com/3d-configurator-kitchen-cuisinella/",
     owned : false,
     media : [{
-      img : "",
-      alt : "",
+      img : ProjectHapticmediaCuisinellaPreviewImg,
+      alt : "Kitchen 3D configurator presentation clip",
       clip : ProjectHapticmediaCuisinellaVid
     }]
   },
@@ -85,13 +117,17 @@ const ProjectList: Project[] = [
     alt : "Shoe 3D configurator project at Hapticmedia cie",
     title : "Kenzo",
     subtitle : "Shoe 3D configurator",
-    description : [""],
+    description : [
+      "This project was carried out within the company Hapticmedia.",
+      "Based on our own 3D engine, we delivered a real-time customized 3D configurator.",
+      "My job on this project was to develop the 3D engine with Typescript and BabylonJS."
+    ],
     date : "October 2017",
-    link : "",
+    details : "https://hapticmedia.com/3d-configurator-shoes/",
     owned : false,
     media : [{
-      img : "",
-      alt : "",
+      img : ProjectHapticmediaKenzoPreviewImg,
+      alt : "Shoe 3D configurator presentation clip",
       clip : ProjectHapticmediaKenzoVid
     }]
   },
@@ -100,14 +136,19 @@ const ProjectList: Project[] = [
     img : ProjectHapticmediaEdenlyImg,
     alt : "Jewelry 3D configurator project at Hapticmedia cie",
     title : "Edenly",
-    subtitle : "Ring 3D configurator",
-    description : [""],
+    subtitle : "Jewelry 3D configurator",
+    description : [
+      "This project was carried out within the company Hapticmedia.",
+      "Based on our own 3D engine, we delivered a real-time customized 3D configurator.",
+      "My job on this project was to develop the 3D engine with Typescript and BabylonJS."
+    ],
     date : "December 2017",
-    link : "",
+    link : "https://en.edenly.com/create-engagement.php",
+    details : "https://hapticmedia.com/3d-jewelry-configurator-edenly/",
     owned : false,
     media : [{
-      img : "",
-      alt : "",
+      img : ProjectHapticmediaEdenlyPreviewImg,
+      alt : "Jewelry 3D configurator presentation clip",
       clip : ProjectHapticmediaEdenlyVid
     }]
   },
@@ -117,13 +158,18 @@ const ProjectList: Project[] = [
     alt : "Lipstick 3D configurator project at Hapticmedia cie",
     title : "Guerlain",
     subtitle : "Lipstick 3D configurator",
-    description : [""],
+    description : [
+      "This project was carried out within the company Hapticmedia.",
+      "Based on our own 3D engine, we delivered a real-time customized 3D configurator.",
+      "My job on this project was to develop the 3D engine with Typescript and BabylonJS."
+    ],
     date : "May 2018",
-    link : "",
+    link : "https://www.guerlain.com/fr/fr-fr/p/rouge-g-luxurious-velvet-metal-rouge-a-levres-metal-velours-tenue-16h-S000010.html",
+    details : "https://hapticmedia.com/3d-configurator-lipstick/",
     owned : false,
     media : [{
-      img : "",
-      alt : "",
+      img : ProjectHapticmediaGuerlainLipstickPreviewImg,
+      alt : "Lipstick 3D configurator preentation clip",
       clip : ProjectHapticmediaGuerlainLipstickVid
     }]
   },
@@ -133,13 +179,17 @@ const ProjectList: Project[] = [
     alt : "Watch 3D configurator project at Hapticmedia cie",
     title : "Baume",
     subtitle : "Watch 3D configurator",
-    description : [""],
+    description : [
+      "This project was carried out within the company Hapticmedia.",
+      "Based on our own 3D engine, we delivered a real-time customized 3D configurator alongside with a webapp.",
+      "My job on this project was to develop the 3D engine with Typescript and BabylonJS."
+    ],
     date : "May 2018",
-    link : "",
+    details : "https://hapticmedia.com/3d-configurator-watch-baume/",
     owned : false,
     media : [{
-      img : "",
-      alt : "",
+      img : ProjectHapticmediaBaumePreviewImg,
+      alt : "Watch 3D configurator presentation clip",
       clip : ProjectHapticmediaBaumeVid
     }]
   },
@@ -150,14 +200,17 @@ const ProjectList: Project[] = [
     title : "Guerlain",
     subtitle : "Perfume 3D configurator",
     description : [
-      "Typescript, Javascript, BabylonJS, NodeJS, React, HTML5, CSS3"
+      "This project was carried out within the company Hapticmedia.",
+      "Based on our own 3D engine, we delivered a real-time customized 3D configurator.",
+      "My job on this project was to develop the 3D engine with Typescript and BabylonJS."
     ],
     date : "December 2019",
-    link : "https://hapticmedia.com/3d-configurator-perfume-bottle/",
+    link : "https://www.guerlain.com/us/en-us/c/personalisation-workshop-us.html",
+    details : "https://hapticmedia.com/3d-configurator-perfume-bottle/",
     owned : false,
     media : [{
-      img : "",
-      alt : "",
+      img : ProjectHapticmediaGuerlainPerfumePreviewImg,
+      alt : "Perfume 3D configurator presentation clip",
       clip : ProjectHapticmediaGuerlainPerfumeVid
     }]
   },
@@ -167,14 +220,18 @@ const ProjectList: Project[] = [
     alt : "Chandelier 3D configurator project at Hapticmedia cie",
     title : "Baccarat",
     subtitle : "Chandelier 3D configurator",
-    description : [""],
+    description : [
+      "This project was carried out within the company Hapticmedia.",
+      "Based on our own 3D engine, we delivered a real-time customized 3D configurator alongside with a webapp.",
+      "My job on this project was to develop the 3D engine with Typescript and BabylonJS."
+    ],
     date : "February 2020",
     link : "",
+    details : "https://hapticmedia.com/my-baccarat-studio/",
     owned : false,
-    github : "",
     media : [{
-      img : "",
-      alt : "",
+      img : ProjectHapticmediaBaccaratPreviewImg,
+      alt : "Chandelier 3D configurator presentation clip",
       clip : ProjectHapticmediaBaccaratVid
     }]
   },
@@ -184,13 +241,18 @@ const ProjectList: Project[] = [
     alt : "Watch 3D configurator project at Hapticmedia cie",
     title : "Piaget",
     subtitle : "Watch 3D configurator",
-    description : [""],
+    description : [
+      "This project was carried out within the company Hapticmedia.",
+      "Based on our own 3D engine, we delivered a real-time customized 3D configurator alongside with a webapp.",
+      "My job on this project was to develop the 3D engine with Typescript and BabylonJS."
+    ],
     date : "2020",
     link : "",
+    details : "https://hapticmedia.com/3d-configurator-watch/",
     owned : false,
     media : [{
-      img : "",
-      alt : "",
+      img : ProjectHapticmediaPiagetPreviewImg,
+      alt : "Watch 3D Configurator presentation clip",
       clip : ProjectHapticmediaPiagetVid
     }]
   },
@@ -200,13 +262,18 @@ const ProjectList: Project[] = [
     alt : "Ring 3D configurator project at Hapticmedia cie",
     title : "Courbet",
     subtitle : "Ring 3D configurator",
-    description : [""],
+    description : [
+      "This project was carried out within the company Hapticmedia.",
+      "Based on our own 3D engine, we delivered a real-time customized 3D configurator.",
+      "My job on this project was to develop the 3D engine with Typescript and BabylonJS."
+    ],
     date : "December 2020",
-    link : "",
+    link : "https://www.en.courbet.com/configurator/configure/R26Y1011%2003%20FV",
+    details : "https://hapticmedia.com/3d-configurator-jewelry/",
     owned : false,
     media : [{
-      img : "",
-      alt : "",
+      img : ProjectHapticmediaCourbetPreviewImg,
+      alt : "Ring 3D configurator presentation clip",
       clip : ProjectHapticmediaCourbetVid
     }]
   },
@@ -216,13 +283,18 @@ const ProjectList: Project[] = [
     alt : "Ring 3D configurator project at Hapticmedia cie",
     title : "Van Cleef & Arpels",
     subtitle : "Ring 3D configurator",
-    description : [""],
+    description : [
+      "This project was carried out within the company Hapticmedia.",
+      "Based on our own 3D engine, we delivered a real-time customized 3D configurator alongside with a webapp.",
+      "My job on this project was to develop the 3D engine with Typescript and BabylonJS."
+    ],
     date : "2021",
-    link : "",
+    link : "https://www.vancleefarpels.com/fr/en/collection/your-poetic-setting/configurator.html",
+    details : "https://hapticmedia.com/3d-configurator-van-cleef-and-arpels/",
     owned : false,
     media : [{
-      img : "",
-      alt : "",
+      img : ProjectHapticmediaVanCleefArpelsPreviewImg,
+      alt : "Ring 3D condigurator presentation clip",
       clip : ProjectHapticmediaVanCleefArpelsVid
     }]
   },
@@ -233,18 +305,22 @@ const ProjectList: Project[] = [
     title : "Apviz",
     subtitle : "SaaS 3D configurator",
     description : [
-      "Typescript, Javascript, BabylonJS, NodeJS, React, HTML5, CSS3"
+      "This project was carried out within the company Hapticmedia.",
+      "Conception, developement and production of a real-time customizable 3D configurator SaaS. Backend side, the client could log in and then manage and/or customize his unlimited number of 3D configurators, one for each of his products.",
+      "My job on this project was plural as a Web Software Engineer, I developed features in Typescript, algorithms in Go, did Cloud monitoring with Amazon CloudWatch and Amazon X-Ray, Cloud computing with Amazon Lambda and Amazon S3, testing with Jest and managed DevOps tools.",
+      "The project has been led by a team of 10 and took 3 years before the first version in production has been released."
     ],
     date : "April 2021",
-    link : "https://apviz.io/",
+    link : "https://apviz.io/request-free-access/",
+    details : "https://apviz.io/",
     owned : false,
     media : [{
-      img : "",
-      alt : "",
+      img : ProjectApvizJewelryPreviewImg,
+      alt : "Jewelry SaaS 3D configurator presentation clip",
       clip : ProjectApvizJewelryVid
     }, {
-      img : "",
-      alt : "",
+      img : ProjectApvizWatchPreviewImg,
+      alt : "Watch SaaS 3D configurator presentation clip",
       clip : ProjectApvizWatchVid
     }]
   },
@@ -261,32 +337,45 @@ const ProjectList: Project[] = [
     ],
     date : "September 2022",
     link : "https://nicolasbuecher.github.io",
-    owned : true,
     github : "https://github.com/NicolasBuecher/nicolasbuecher.github.io",
+    owned : true,
     media : [{
-      img : ProjectHapticmediaBaccaratVidPreview,
-      alt : "",
-      clip : ProjectHapticmediaBaccaratVid
-    },
-    {
-      img : ProjectHapticmediaBaccaratImg,
-      alt : ""
-    },
-    {
-      img : ProjectHapticmediaBaumeImg,
-      alt : ""
-    },
-    {
-      img : ProjectHapticmediaCourbetImg,
-      alt : ""
-    },
-    {
-      img : ProjectHapticmediaCuisinellaImg,
-      alt : ""
+      img : ProjectPersonalWebsiteResponsiveImg,
+      alt : "Responsive website"
     }, {
-      img : ProjectHapticmediaGuerlainLipstickImg,
-      alt : ""
+      img : ProjectPersonalWebsiteHomeImg,
+      alt : "Home page"
+    }, {
+      img : ProjectPersonalWebsiteAboutImg,
+      alt : "About page"
+    }, {
+      img : ProjectPersonalWebsiteProjectImg,
+      alt : "Project page"
     }]
+    // media : [{
+    //   img : ProjectHapticmediaBaccaratPreviewImg,
+    //   alt : "",
+    //   clip : ProjectHapticmediaBaccaratVid
+    // },
+    // {
+    //   img : ProjectHapticmediaBaccaratImg,
+    //   alt : ""
+    // },
+    // {
+    //   img : ProjectHapticmediaBaumeImg,
+    //   alt : ""
+    // },
+    // {
+    //   img : ProjectHapticmediaCourbetImg,
+    //   alt : ""
+    // },
+    // {
+    //   img : ProjectHapticmediaCuisinellaImg,
+    //   alt : ""
+    // }, {
+    //   img : ProjectHapticmediaGuerlainLipstickImg,
+    //   alt : ""
+    // }]
   }
 ];
 

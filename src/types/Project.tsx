@@ -48,14 +48,19 @@ export type Project = {
   link?: string;
 
   /**
-   * Whether I own the final project or not.
+   * The URL to more details about the project.
    */
-  owned: boolean;
+  details?: string;
 
   /**
    * The URL to the GitHub repository of the project.
    */
   github?: string;
+
+  /**
+   * Whether I own the final project or not.
+  */
+  owned: boolean;
 
   /**
    * A list of media illustrating the project.

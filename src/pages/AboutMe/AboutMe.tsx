@@ -1,6 +1,6 @@
 import { Box } from "@mui/material";
 import Grid from "@mui/material/Unstable_Grid2";
-import AboutMeImg from "../../assets/aboutMeTravel.png";
+import AboutMeImg from "../../assets/images/aboutMeTravel.png";
 import AboutSectionContent from "../../components/AboutSectionContent/AboutSectionContent";
 import AboutSectionTitle from "../../components/AboutSectionTitle/AboutSectionTitle";
 import DownloadButton from "../../components/DownloadButton/DownloadButton";

@@ -1,10 +1,12 @@
+import GitHub from "@mui/icons-material/GitHub";
+import Info from "@mui/icons-material/Info";
+import Visibility from "@mui/icons-material/Visibility";
 import Box from "@mui/material/Box";
 import Button from "@mui/material/Button";
 import Typography from "@mui/material/Typography";
 import Grid from "@mui/material/Unstable_Grid2";
 import { useParams } from "react-router-dom";
 import Carousel from "../../components/Carousel/Carousel";
-import GitHubIconButton from "../../components/GitHubIconButton/GitHubIconButton";
 import ProjectList from "../../data/ProjectList";
 import parseIntStrict from "../../helpers/parseIntStrict";
 
@@ -59,25 +61,53 @@ function Project(): JSX.Element {
               {line}
             </Typography>
           ))}
-          <Box display="flex" flexDirection="column" justifyContent="center" alignContent="center" alignItems="center">
+          <Box display="flex" flexDirection="column" justifyContent="center" alignContent="center" alignItems="center" my="2vw">
             <Button
-              sx={{ width: "70%", mx: "auto", my: "1vw" }}
+              startIcon={<Visibility />}
+              sx={{ width: "70%", mx: "auto", my: ".5vw" }}
               variant="contained"
               size="medium"
               disabled={!project.link}
               component="a"
               href={project.link}
+              target="_blank"
+              rel="noopener noreferrer"
             >
-              Link to the project
+              See the project
+            </Button>
+            <Button
+              startIcon={<Info />}
+              sx={{ width: "70%", mx: "auto", my: ".5vw" }}
+              variant="contained"
+              size="medium"
+              disabled={!project.details}
+              component="a"
+              href={project.details}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              Project details
+            </Button>
+            <Button
+              startIcon={<GitHub />}
+              sx={{ width: "70%", mx: "auto", my: ".5vw" }}
+              variant="contained"
+              size="medium"
+              disabled={!project.github}
+              component="a"
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+            >
+              GitHub repository
             </Button>
             {project.owned
               ? undefined
               : (
-                <Typography variant="overline" align="center" sx={{ width: "70%", lineHeight: 1.5, fontSize: "0.6rem" }}>
+                <Typography variant="overline" align="center" sx={{ width: "70%", my: "0.3vw", lineHeight: 1.5, fontSize: "0.6rem" }}>
                   (Please note this project could be taken offline at any moment as I don&apos;t own it)
                 </Typography>
               )}
-            {project.github ? <GitHubIconButton /> : undefined}
           </Box>
         </Grid>
       </Grid>

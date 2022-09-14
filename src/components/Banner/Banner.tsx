@@ -1,5 +1,5 @@
 import { Box, Typography } from "@mui/material";
-import HomeBannerImg from "../../assets/homeBanner.png";
+import HomeBannerImg from "../../assets/images/homeBanner.png";
 
 
 // Responsive background image style
