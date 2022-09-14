@@ -17,9 +17,10 @@ function Projects(): JSX.Element {
         <Typography variant="h4" fontSize="2rem" fontWeight="500">MY PROJECTS</Typography>
       </Grid>
       <Grid container spacing="3vw" m="0 4vw" display="flex" justifyContent="center">
-        {ProjectList.map(({ id, img, alt, title, subtitle }) => (
+        {ProjectList.slice(0).reverse().map(({ id, img, alt, title, subtitle }) => (
           <Grid xs={6} sm={4} md={3} lg={3} xl={2.2} key={id}>
             <ProjectCard
+              id={id}
               img={img}
               alt={alt}
               title={title}

@@ -7,6 +7,7 @@ import { Link } from "react-router-dom";
 
 
 interface ProjectCardProps {
+  id: number;
   img: string;
   alt: string;
   title: string;
@@ -16,17 +17,18 @@ interface ProjectCardProps {
 /**
  * Returns a React component displaying a project card preview and handling the open project event.
  *
- * @param props.img Project preview image to display
- * @param props.alt Alt text for the project preview image
- * @param props.title Project title
- * @param props.subtitle Project subtitle
+ * @param {number} props.id Project identifier
+ * @param {string} props.img Project preview image to display
+ * @param {string} props.alt Alt text for the project preview image
+ * @param {string} props.title Project title
+ * @param {string} props.subtitle Project subtitle
  * @returns
  */
-function ProjectCard({ img, alt, title, subtitle }: ProjectCardProps): JSX.Element {
+function ProjectCard({ id, img, alt, title, subtitle }: ProjectCardProps): JSX.Element {
 
   return (
     <Card sx={{ boxShadow: "none", backgroundColor: "transparent" }}>
-      <CardActionArea component={Link} to="/">
+      <CardActionArea component={Link} to={`/projects/${id}`}>
         <CardMedia
           component="img"
           alt={alt}
