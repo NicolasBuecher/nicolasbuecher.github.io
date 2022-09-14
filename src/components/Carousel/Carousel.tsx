@@ -1,4 +1,5 @@
-import ImageGallery, { ReactImageGalleryItem } from "react-image-gallery";
+import ImageGallery from "react-image-gallery";
+import type { ReactImageGalleryItem } from "react-image-gallery";
 import type { ProjectMedia } from "../../types/ProjectMedia";
 import "react-image-gallery/styles/css/image-gallery.css";
 import "./Carousel.css";

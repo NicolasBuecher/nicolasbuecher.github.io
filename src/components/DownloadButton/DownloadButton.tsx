@@ -1,4 +1,5 @@
-import { Button, Link } from "@mui/material";
+import Button from "@mui/material/Button";
+import Link from "@mui/material/Link";
 
 
 interface DownloadButtonProps {

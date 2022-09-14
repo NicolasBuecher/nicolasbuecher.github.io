@@ -1,4 +1,4 @@
-import { Box } from "@mui/material";
+import Box from "@mui/material/Box";
 import Banner from "../../components/Banner/Banner";
 import AboutMe from "../AboutMe/AboutMe";
 import Projects from "../Projects/Projects";
