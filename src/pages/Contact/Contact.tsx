@@ -68,12 +68,20 @@ function Contact(): JSX.Element {
                 </Grid>
                 <Box display="flex" flexDirection="column" alignItems="center" width="100%" mt="10px">
                   <Collapse in={successAlert}>
-                    <Alert severity="success" onClose={() => { setSuccessAlert(false); }}>
+                    <Alert
+                      severity="success"
+                      onClose={() => { setSuccessAlert(false); }}
+                      data-testid="success-alert"
+                    >
                       Your message has been sent successfully!
                     </Alert>
                   </Collapse>
                   <Collapse in={errorAlert}>
-                    <Alert severity="error" onClose={() => { setErrorAlert(false); }}>
+                    <Alert
+                      severity="error"
+                      onClose={() => { setErrorAlert(false); }}
+                      data-testid="error-alert"
+                    >
                       An error occurred.
                     </Alert>
                   </Collapse>

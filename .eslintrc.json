@@ -28,7 +28,10 @@
             "extends": ["plugin:testing-library/react"],
             "rules": {
                 // Allows rendering in setup functions
-                "testing-library/no-render-in-setup": "off"
+                "testing-library/no-render-in-setup": "off",
+
+                // Allows nesting describe/test callbacks in Jest tests
+                "max-nested-callbacks": "off"
             }
         }
     ],
