@@ -1,14 +1,45 @@
-import material from "@mui/material";
+import useMediaQuery from "@mui/material/useMediaQuery";
 import { render, screen } from "@testing-library/react";
 import user from "@testing-library/user-event";
 import { BrowserRouter } from "react-router-dom";
 import Navbar from "./Navbar";
 
 
+/**
+ * When `useMediaQuery` is imported as a named import in the file to test,
+ * then we should mock it this way:
+ *
+ * jest.mock("@mui/material", () => ({
+ *   ...jest.requireActual("@mui/material"),
+ *   useMediaQuery : jest.fn()
+ * }));
+ *
+ * Independently we can change the returned value like this:
+ *
+ * jest.spyOn(material, "useMediaQuery").mockReturnValue(true);
+ *
+ * Or the mock implementation like this:
+ *
+ * jest.spyOn(material, "useMediaQuery").mockImplementation(jest.fn());
+ *
+ *
+ * When `useMediaQuery` is imported as a default import in the file to test,
+ * then we should mock it this way:
+ *
+ * jest.mock("@mui/material/useMediaQuery", () => ({
+ *   __esModule: true,
+ *   default: jest.fn()
+ * }));
+ *
+ * And then we can change the returned value like this:
+ *
+ * (useMediaQuery as jest.Mock).mockReturnValue(true);
+ */
+
 // Mock useMediaQuery function
-jest.mock("@mui/material", () => ({
-  ...jest.requireActual("@mui/material"),
-  useMediaQuery : jest.fn()
+jest.mock("@mui/material/useMediaQuery", () => ({
+  __esModule : true,
+  default : jest.fn()
 }));
 
 describe("Navbar", () => {
@@ -16,7 +47,7 @@ describe("Navbar", () => {
   describe("when screen is too small", () => {
 
     beforeEach(() => {
-      jest.spyOn(material, "useMediaQuery").mockReturnValue(true);
+      (useMediaQuery as jest.Mock).mockReturnValue(true);
 
       // Wrap Navbar into BrowserRouter otherwise we get an error
       // See https://stackoverflow.com/a/72980233/5053300
@@ -53,7 +84,7 @@ describe("Navbar", () => {
   describe("when screen is wider", () => {
 
     beforeEach(() => {
-      jest.spyOn(material, "useMediaQuery").mockReturnValue(false);
+      (useMediaQuery as jest.Mock).mockReturnValue(false);
 
       // Wrap Navbar into BrowserRouter otherwise we get an error
       // See https://stackoverflow.com/a/72980233/5053300
