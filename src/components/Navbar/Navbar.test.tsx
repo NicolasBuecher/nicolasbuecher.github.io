@@ -116,7 +116,7 @@ describe("Navbar", () => {
 
       it("should route to the home page", () => {
         user.click(screen.getByRole("link", { name: "CONTACT" }));
-        expect(global.window.location.href).toBe("http://localhost/");
+        expect(global.window.location.href).toContain("/contact");
       });
 
     });

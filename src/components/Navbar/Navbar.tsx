@@ -70,7 +70,7 @@ function Navbar(): JSX.Element {
               <MenuItem onClick={closeMenu} component={Link} to="/">Home</MenuItem>
               <MenuItem onClick={closeMenu} component={Link} to="/about">About Me</MenuItem>
               <MenuItem onClick={closeMenu} component={Link} to="/projects">Projects</MenuItem>
-              <MenuItem onClick={closeMenu} component={Link} to="/">Contact</MenuItem>
+              <MenuItem onClick={closeMenu} component={Link} to="/contact">Contact</MenuItem>
             </Menu>
           </Box>
         </Toolbar>
@@ -91,7 +91,7 @@ function Navbar(): JSX.Element {
           <Button color="inherit" sx={{ mx: "1%" }} component={Link} to="/">HOME</Button>
           <Button color="inherit" sx={{ mx: "1%" }} component={Link} to="/about">ABOUT ME</Button>
           <Button color="inherit" sx={{ mx: "1%" }} component={Link} to="/projects">PROJECTS</Button>
-          <Button color="inherit" sx={{ mx: "1%" }} component={Link} to="/">CONTACT</Button>
+          <Button color="inherit" sx={{ mx: "1%" }} component={Link} to="/contact">CONTACT</Button>
         </Box>
         <Box sx={{ flex: "0 0 10%", display: "flex", justifyContent: "flex-end" }} data-testid="media-icons">
           <LinkedInIconButton />

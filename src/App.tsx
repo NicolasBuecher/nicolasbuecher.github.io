@@ -10,7 +10,7 @@ import {
 import Footer from "./components/Footer/Footer";
 import Navbar from "./components/Navbar/Navbar";
 import AboutMe from "./pages/AboutMe/AboutMe";
-import Experience from "./pages/Experience/Experience";
+import Contact from "./pages/Contact/Contact";
 import Home from "./pages/Home/Home";
 import Project from "./pages/Project/Project";
 import Projects from "./pages/Projects/Projects";
@@ -48,7 +48,7 @@ function App(): JSX.Element {
             <Route path="/about" element={<AboutMe />} />
             <Route path="/projects" element={<Projects />} />
             <Route path="/projects/:id" element={<Project />} />
-            <Route path="/experience" element={<Experience />} />
+            <Route path="/contact" element={<Contact />} />
           </Routes>
           <Footer />
         </Router>
