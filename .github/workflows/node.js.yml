@@ -1,5 +1,6 @@
 # This workflow will do a clean installation of node dependencies, cache/restore them, build the source code and run tests across different versions of node
 # For more information see: https://help.github.com/actions/language-and-framework-guides/using-nodejs-with-github-actions
+# If tests have passed, it will also deploy the project create a release if latest commits require it
 
 name: CI/CD
 
@@ -62,3 +63,8 @@ jobs:
         user_email: 'buecher.nicolas@gmail.com'
         github_token: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}
         repository: ${{ github.repository }}
+
+    - name: Release
+      run: npx semantic-release
+      env:
+        GIITHUB_TOKEN: ${{ secrets.ACTIONS_DEPLOY_ACCESS_TOKEN }}

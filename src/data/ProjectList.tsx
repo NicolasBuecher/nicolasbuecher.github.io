@@ -306,9 +306,9 @@ const ProjectList: Project[] = [
     subtitle : "SaaS 3D configurator",
     description : [
       "This project was carried out within the company Hapticmedia.",
-      "Conception, developement and production of a real-time customizable 3D configurator SaaS. Backend side, the client could log in and then manage and/or customize his unlimited number of 3D configurators, one for each of his products.",
+      "Conception, developement and production of a real-time rendering, customizable 3D configurator SaaS. Backend side, the client could log in and then manage and/or customize his unlimited number of 3D configurators, one for each of his products.",
       "My job on this project was plural as a Web Software Engineer, I developed features in Typescript, algorithms in Go, did Cloud monitoring with Amazon CloudWatch and Amazon X-Ray, Cloud computing with Amazon Lambda and Amazon S3, testing with Jest and managed DevOps tools.",
-      "The project has been led by a team of 10 and took 3 years before the first version in production has been released."
+      "The project has been led by a team of 10 and took 3 years before the first version in production were released."
     ],
     date : "April 2021",
     link : "https://apviz.io/request-free-access/",
