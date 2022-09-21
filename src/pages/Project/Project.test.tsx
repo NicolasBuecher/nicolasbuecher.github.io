@@ -19,8 +19,20 @@ jest.mock("../../data/ProjectList.tsx", () => ([{
   description : ["descriptionTest"],
   date : "dateTest",
   link : "",
-  owned : false,
+  owned : true,
   github : "githubTest",
+  media : []
+}, {
+  id : 1,
+  img : "imgTest_1",
+  alt : "altTest_1",
+  title : "titleTest_1",
+  subtitle : "subtitleTest_1",
+  description : ["descriptionTest_1"],
+  date : "dateTest_1",
+  link : "",
+  owned : false,
+  github : "githubTest_1",
   media : []
 }]));
 
@@ -93,10 +105,20 @@ describe("Project", () => {
     expect(screen.getByText("descriptionTest")).toBeInTheDocument();
   });
 
+  describe("when project is owned", () => {
+
+    it("should not display a disclaimer", () => {
+      jest.spyOn(Router, "useParams").mockReturnValue({ id: "0" });
+      renderProject();
+      expect(screen.queryByText("(Please note this project could be taken offline at any moment as I don't own it)")).not.toBeInTheDocument();
+    });
+
+  });
+
   describe("when project is not owned", () => {
 
     it("should display a disclaimer", () => {
-      jest.spyOn(Router, "useParams").mockReturnValue({ id: "0" });
+      jest.spyOn(Router, "useParams").mockReturnValue({ id: "1" });
       renderProject();
       expect(screen.getByText("(Please note this project could be taken offline at any moment as I don't own it)")).toBeInTheDocument();
     });
