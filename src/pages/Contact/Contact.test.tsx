@@ -1,5 +1,5 @@
 import emailjs, { EmailJSResponseStatus } from "@emailjs/browser";
-import { act, render, screen } from "@testing-library/react";
+import { act, render, screen, waitFor } from "@testing-library/react";
 import user from "@testing-library/user-event";
 import Contact from "./Contact";
 
@@ -7,11 +7,6 @@ import Contact from "./Contact";
 const successResponseStatus: EmailJSResponseStatus = {
   text : "test",
   status : 200
-};
-
-const errorResponseStatus: EmailJSResponseStatus = {
-  text : "test",
-  status : 400
 };
 
 describe("Contact", () => {
@@ -43,11 +38,30 @@ describe("Contact", () => {
         render(<Contact />);
         user.click(screen.getByRole("button", { name: "Send" }));
 
-        await act(async () => {
-          await promise;
+        // `waitFor` replaces the `await promise` needed in the previous test
+        await waitFor(() => expect(screen.getByTestId("success-alert")).not.toHaveClass("MuiCollapse-hidden"));
+      });
+
+      describe("when alert close button is clicked", () => {
+
+        it("should close the alert", async () => {
+          const promise = Promise.resolve(successResponseStatus);
+          jest.spyOn(emailjs, "sendForm").mockImplementation(jest.fn(() => promise));
+
+          render(<Contact />);
+          user.click(screen.getByRole("button", { name: "Send" }));
+
+          await act(async () => {
+            await promise;
+          });
+
+          user.click(screen.getByRole("button", { name: "Close" }));
+
+          // Before the Collpase element gets the MuiCollapse-hidden class there's 300ms of animation going on
+          // That's why we need `waitFor` async function here
+          await waitFor(() => expect(screen.queryByTestId("success-alert")).toHaveClass("MuiCollapse-hidden"));
         });
 
-        expect(screen.getByTestId("success-alert")).toBeInTheDocument();
       });
 
     });
@@ -55,17 +69,36 @@ describe("Contact", () => {
     describe("when email has not been sent", () => {
 
       it("should display an error alert", async () => {
-        const promise = Promise.resolve(errorResponseStatus);
+        const promise = Promise.reject();
         jest.spyOn(emailjs, "sendForm").mockImplementation(jest.fn(() => promise));
 
         render(<Contact />);
         user.click(screen.getByRole("button", { name: "Send" }));
 
-        await act(async () => {
-          await promise;
+        // `waitFor` replaces the `await promise` needed in the previous test
+        await waitFor(() => expect(screen.getByTestId("error-alert")).not.toHaveClass("MuiCollapse-hidden"));
+      });
+
+      describe("when alert close button is clicked", () => {
+
+        it("should close the alert", async () => {
+          const promise = Promise.resolve(successResponseStatus);
+          jest.spyOn(emailjs, "sendForm").mockImplementation(jest.fn(() => promise));
+
+          render(<Contact />);
+          user.click(screen.getByRole("button", { name: "Send" }));
+
+          await act(async () => {
+            await promise;
+          });
+
+          user.click(screen.getByRole("button", { name: "Close" }));
+
+          // Before the Collpase element gets the MuiCollapse-hidden class there's 300ms of animation going on
+          // That's why we need `waitFor` async function here
+          await waitFor(() => expect(screen.queryByTestId("error-alert")).toHaveClass("MuiCollapse-hidden"));
         });
 
-        expect(screen.getByTestId("error-alert")).toBeInTheDocument();
       });
 
     });
