@@ -1,7 +1,7 @@
 {
   "files": {
     "main.css": "/static/css/main.e59100cb.css",
-    "main.js": "/static/js/main.e12f3c04.js",
+    "main.js": "/static/js/main.ffe99ec6.js",
     "static/js/787.a364051d.chunk.js": "/static/js/787.a364051d.chunk.js",
     "static/media/projectHapticmediaPiaget.mp4": "/static/media/projectHapticmediaPiaget.a11562f48a51e4aab332.mp4",
     "static/media/projectHapticmediaBaccarat.mp4": "/static/media/projectHapticmediaBaccarat.bade8d21711235fccee8.mp4",
@@ -65,11 +65,11 @@
     "static/media/poppins-latin-ext-300-normal.woff2": "/static/media/poppins-latin-ext-300-normal.b0bb003afc8483bd32d2.woff2",
     "index.html": "/index.html",
     "main.e59100cb.css.map": "/static/css/main.e59100cb.css.map",
-    "main.e12f3c04.js.map": "/static/js/main.e12f3c04.js.map",
+    "main.ffe99ec6.js.map": "/static/js/main.ffe99ec6.js.map",
     "787.a364051d.chunk.js.map": "/static/js/787.a364051d.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.e59100cb.css",
-    "static/js/main.e12f3c04.js"
+    "static/js/main.ffe99ec6.js"
   ]
 }
