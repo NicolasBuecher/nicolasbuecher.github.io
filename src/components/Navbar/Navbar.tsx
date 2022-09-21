@@ -59,7 +59,6 @@ function Navbar(): JSX.Element {
             </IconButton>
             <Menu
               id="main-menu"
-              data-testid="main-menu"
               anchorEl={anchorElement}
               open={isMenuOpen}
               onClose={closeMenu}

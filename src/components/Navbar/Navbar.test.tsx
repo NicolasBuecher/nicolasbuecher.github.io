@@ -72,9 +72,21 @@ describe("Navbar", () => {
 
     describe("when menu button is clicked", () => {
 
-      it("should open menu", () => {
+      beforeEach(() => {
         user.click(screen.getByTestId("main-menu-button"));
-        expect(screen.getByTestId("main-menu")).toBeInTheDocument();
+      });
+
+      it("should open menu", () => {
+        expect(screen.getByRole("menuitem", { name: "Home" })).toBeInTheDocument();
+      });
+
+      describe("when menu item is clicked", () => {
+
+        it("should close menu", () => {
+          user.click(screen.getByRole("menuitem", { name: "Home" }));
+          expect(screen.queryByRole("menuitem", { name: "Home" })).not.toBeInTheDocument();
+        });
+
       });
 
     });
