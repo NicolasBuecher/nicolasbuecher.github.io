@@ -38,7 +38,7 @@ describe("Contact", () => {
         render(<Contact />);
         user.click(screen.getByRole("button", { name: "Send" }));
 
-        // `waitFor` replaces the `await promise` needed in the previous test
+        // `waitFor` allows to wait for the class to be removed as it takes a 300ms animation to be removed
         await waitFor(() => expect(screen.getByTestId("success-alert")).not.toHaveClass("MuiCollapse-hidden"));
       });
 
@@ -55,10 +55,10 @@ describe("Contact", () => {
             await promise;
           });
 
-          user.click(screen.getByRole("button", { name: "Close" }));
+          // `findByRole` allows to wait for the button to appear before querying it
+          user.click(await screen.findByRole("button", { name: "Close" }));
 
-          // Before the Collpase element gets the MuiCollapse-hidden class there's 300ms of animation going on
-          // That's why we need `waitFor` async function here
+          // `waitFor` allows to wait for the class to be added as it takes a 300ms animation to be added
           await waitFor(() => expect(screen.queryByTestId("success-alert")).toHaveClass("MuiCollapse-hidden"));
         });
 
@@ -75,27 +75,23 @@ describe("Contact", () => {
         render(<Contact />);
         user.click(screen.getByRole("button", { name: "Send" }));
 
-        // `waitFor` replaces the `await promise` needed in the previous test
+        // `waitFor` allows to wait for the class to be removed as it takes a 300ms animation to be removed
         await waitFor(() => expect(screen.getByTestId("error-alert")).not.toHaveClass("MuiCollapse-hidden"));
       });
 
       describe("when alert close button is clicked", () => {
 
         it("should close the alert", async () => {
-          const promise = Promise.resolve(successResponseStatus);
+          const promise = Promise.reject();
           jest.spyOn(emailjs, "sendForm").mockImplementation(jest.fn(() => promise));
 
           render(<Contact />);
           user.click(screen.getByRole("button", { name: "Send" }));
 
-          await act(async () => {
-            await promise;
-          });
+          // `findByRole` allows to wait for the button to appear before querying it
+          user.click(await screen.findByRole("button", { name: "Close" }));
 
-          user.click(screen.getByRole("button", { name: "Close" }));
-
-          // Before the Collpase element gets the MuiCollapse-hidden class there's 300ms of animation going on
-          // That's why we need `waitFor` async function here
+          // `waitFor` allows to wait for the class to be added as it takes a 300ms animation to be added
           await waitFor(() => expect(screen.queryByTestId("error-alert")).toHaveClass("MuiCollapse-hidden"));
         });
 
