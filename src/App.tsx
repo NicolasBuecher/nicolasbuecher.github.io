@@ -12,6 +12,7 @@ import Navbar from "./components/Navbar/Navbar";
 import AboutMe from "./pages/AboutMe/AboutMe";
 import Contact from "./pages/Contact/Contact";
 import Home from "./pages/Home/Home";
+import NotFound from "./pages/NotFound/NotFound";
 import Project from "./pages/Project/Project";
 import Projects from "./pages/Projects/Projects";
 import "./App.css";
@@ -49,6 +50,7 @@ function App(): JSX.Element {
             <Route path="/projects" element={<Projects />} />
             <Route path="/projects/:id" element={<Project />} />
             <Route path="/contact" element={<Contact />} />
+            <Route path="*" element={<NotFound />} />
           </Routes>
           <Footer />
         </Router>

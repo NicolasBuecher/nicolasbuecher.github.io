@@ -1,4 +1,5 @@
 import { render, screen } from "@testing-library/react";
+import React from "react";
 import Router from "react-router-dom";
 import Project from "./Project";
 
@@ -36,43 +37,66 @@ jest.mock("../../data/ProjectList.tsx", () => ([{
   media : []
 }]));
 
+// Mock NotFound component
+jest.mock("../NotFound/NotFound", () => () => <div data-testid="not-found" />);
+
 const renderProject = (): void => {
   render(<Project />);
 };
 
-// Prevent of logging expected thrown errors
-const expectToThrowSilently = (snapshot: string): void => {
-  // Remove error logs
-  // See https://github.com/facebook/react/issues/11098#issuecomment-523977830
-  const spy = jest.spyOn(console, "error");
-  spy.mockImplementation(undefined);
+// // Prevent of logging expected thrown errors
+// const expectToThrowSilently = (snapshot: string): void => {
+//   // Remove error logs
+//   // See https://github.com/facebook/react/issues/11098#issuecomment-523977830
+//   const spy = jest.spyOn(console, "error");
+//   spy.mockImplementation(undefined);
 
-  expect(renderProject).toThrowErrorMatchingInlineSnapshot(snapshot);
+//   expect(renderProject).toThrowErrorMatchingInlineSnapshot(snapshot);
 
-  // Restore error logs
-  spy.mockRestore();
-};
+//   // Restore error logs
+//   spy.mockRestore();
+// };
 
 describe("Project", () => {
 
-  it("should throw if id param is `undefined`", () => {
-    jest.spyOn(Router, "useParams").mockReturnValue({ id: undefined });
-    expectToThrowSilently("\"No project id.\"");
+  describe("when id param is `undefined`", () => {
+
+    it("should display a 404 page", () => {
+      jest.spyOn(Router, "useParams").mockReturnValue({ id: undefined });
+      renderProject();
+      expect(screen.getByTestId("not-found")).toBeInTheDocument();
+    });
+
   });
 
-  it("should throw if id param is empty", () => {
-    jest.spyOn(Router, "useParams").mockReturnValue({ id: "" });
-    expectToThrowSilently("\"No project id.\"");
+  describe("when id param is empty", () => {
+
+    it("should display a 404 page", () => {
+      jest.spyOn(Router, "useParams").mockReturnValue({ id: "" });
+      renderProject();
+      expect(screen.getByTestId("not-found")).toBeInTheDocument();
+    });
+
   });
 
-  it("should throw if id param is invalid", () => {
-    jest.spyOn(Router, "useParams").mockReturnValue({ id: "001" });
-    expectToThrowSilently("\"Invalid project id.\"");
+  describe("when id param is invalid", () => {
+
+    it("should display a 404 page", () => {
+      jest.spyOn(Router, "useParams").mockReturnValue({ id: "001" });
+      renderProject();
+      expect(screen.getByTestId("not-found")).toBeInTheDocument();
+    });
+
   });
 
-  it("should throw if id param does not match any project", () => {
-    jest.spyOn(Router, "useParams").mockReturnValue({ id: "2" });
-    expectToThrowSilently("\"Project ID does not match any project.\"");
+  describe("when id param does not match any project", () => {
+
+    it("should display a 404 page", () => {
+      jest.spyOn(Router, "useParams").mockReturnValue({ id: "2" });
+      renderProject();
+      expect(screen.getByTestId("not-found")).toBeInTheDocument();
+    });
+
   });
 
   it("should display project title matching id param", () => {

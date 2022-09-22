@@ -9,6 +9,7 @@ import Carousel from "../../components/Carousel/Carousel";
 import ProjectButton from "../../components/ProjectButton/ProjectButton";
 import ProjectList from "../../data/ProjectList";
 import parseIntStrict from "../../helpers/parseIntStrict";
+import NotFound from "../NotFound/NotFound";
 
 
 /**
@@ -20,19 +21,18 @@ function Project(): JSX.Element {
 
   const { id } = useParams();
 
-  // TODO: Instead of throwing, please redirect to error page
   if (!id) {
-    throw new Error("No project id.");
+    return <NotFound>No project id</NotFound>;
   }
 
   const parsedId = parseIntStrict(id);
   if (parsedId === undefined) {
-    throw new Error("Invalid project id.");
+    return <NotFound>Invalid project id</NotFound>;
   }
 
   const project = ProjectList[parsedId];
   if (project === undefined) {
-    throw new Error("Project ID does not match any project.");
+    return <NotFound>Project id doesn&apos;t exist</NotFound>;
   }
 
   return (
